@@ -14,13 +14,25 @@
         <div id="content" class="bg-white w-full flex-1 shadow-[0px_0px_10px_2px_rgba(255,255,255,0.22),inset_0px_0px_6px_0px_rgba(0,0,0,0.28),inset_0px_14px_14px_-12px_rgba(0,0,0,0.28)] p-5">
           <p>lorem ipsum dolor sit amet blablabla</p>
         </div>
-        <div id="buttons-container" class="rounded-b-sm h-6 overflow-hidden flex flex-row border border-black/25 items-end absolute top-0 right-3 shadow-[0px_0px_8px_1px_rgba(255,255,255,0.45),inset_0px_0px_8px_1px_rgba(255,255,255,0.38),inset_0px_12px_22px_-6px_rgba(255,255,255,0.62)]">
-          <div class="text-white w-8 h-3 flex items-center justify-center border-r border-black/25 bg-[#3E4E77]/70 shadow-[inset_0px_1px_2px_0px_rgba(255,255,255,0.45)] pt-5 pb-1.5"><i class="bx bx-minus text-[15px] leading-none"></i></div>
-          <div class="text-white w-8 h-3 flex items-center justify-center border-r border-black/25 bg-[#3E4E77]/70 shadow-[inset_0px_1px_2px_0px_rgba(255,255,255,0.45)] pt-5 pb-2.5"><i class="bx bx-rectangle text-[15px] leading-none"></i></div>
-          <div class="text-white w-8 h-3 flex items-center justify-center  bg-[#C40F05]/70 shadow-[inset_0px_1px_2px_0px_rgba(255,255,255,0.45)] pt-5 pb-2.5"><i class="bx bx-x text-[15px] leading-none"></i></div>
+        <div id="buttons-container" class="flex flex-row rounded-b-md overflow-hidden border-x border-b border-black/25 items-end absolute top-0 right-3 shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
+          <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
+            <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#4e6296]"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
+          </button>
+          <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
+            <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#4e6296]"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
+          </button>
+          <button class="relative w-10 h-6 group overflow-hidden">
+            <div class="absolute inset-0 bg-[#C40F05]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-[#e61206]"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
+            <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
+          </button>
         </div>
         <div id="title-logo-text" class="flex flex-row items-center gap-2 absolute top-2 left-3">
-          <div class="bg-white w-[20px] h-[20px] rounded-full"></div>
+          <div class="bg-white w-5 h-5 rounded-full"></div>
           <p class="text-black">Frutiger Aero</p>
         </div>
       </div>
