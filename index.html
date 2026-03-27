@@ -6,56 +6,82 @@
     <title>frutiger_aero</title>
     <link href="/src/style.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="/src/img/icons/106.ico" />
+    <link rel="icon" href="/src/img/icons/logo.ico" />
   </head>
   <body class="bg-[url(/img/bg_img.jpg)] bg-fixed bg-cover min-h-screen">
 
-
-    <header class="sticky top-0 z-30 h-14 w-full rounded-none bg-white/8 backdrop-blur-[2px] border-b border-black/30 shadow-[inset_0px_10px_26px_0px_rgba(255,255,255,0.78),0px_0px_6px_3px_rgba(0,0,0,0.22)]"></header>
-
-
-    <main class="px-4 pb-4 sm:px-8 sm:pb-8 lg:px-12 lg:pb-12 pt-10">
-
-
-      <div id="container" class="h-120 w-full max-w-6xl rounded-md bg-white/6 backdrop-blur-[1px] shadow-[inset_0px_0px_10px_4px_rgba(255,255,255,0.35),0px_0px_6px_3px_rgba(0,0,0,0.22)] p-3 pt-9.5 relative overflow-hidden mx-auto flex flex-col my-5">
-        <div id="content" class="bg-white w-full flex-1 shadow-[0px_0px_10px_2px_rgba(255,255,255,0.22),inset_0px_0px_6px_0px_rgba(0,0,0,0.28),inset_0px_14px_14px_-12px_rgba(0,0,0,0.28)] p-5">
-          <p>lorem ipsum dolor sit amet blablabla</p>
-          <a
-            id="CTA"
-            href=""
-            class="cta-win7"
-          >Voir plus</a>
+    <header class="sticky top-0 z-30 h-14 w-full bg-white/8 backdrop-blur-[2px] border-b border-black/30 shadow-[inset_0px_10px_26px_0px_rgba(255,255,255,0.78),0px_0px_6px_3px_rgba(0,0,0,0.22)]">
+      <div class="max-w-6xl h-full mx-auto px-6 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img src="/src/img/icons/logo.ico" alt="ClearSky" class="w-5 h-5" />
+          <span class="text-black font-open-sans font-semibold text-[15px]">ClearSky Archiving</span>
         </div>
-        <div id="buttons-container" class="flex flex-row rounded-b-md overflow-hidden border-x border-b border-black/25 items-end absolute top-0 right-3 shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
-          <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
+        <nav class="flex items-center gap-6">
+          <a href="#hero" class="win7-nav-link">Accueil</a>
+          <a href="#explorateur" class="win7-nav-link">Explorateur</a>
+          <a href="#tarifs" class="win7-nav-link">Tarifs</a>
+          <a href="#footer" class="win7-nav-link">Assistance</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="#" class="cta-win7-soft">Connexion</a>
+          <a href="#" class="cta-win7">Inscription</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="px-6 pb-10 pt-8 space-y-8">
+      <section id="hero" class="win7-shell">
+        <div class="win7-window-buttons" aria-hidden="true">
+          <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
             <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#4e6296]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
-            <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
+            <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
           </button>
-          <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
+          <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
             <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#4e6296]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
             <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
           </button>
-          <button class="relative w-10 h-6 group overflow-hidden px-6 flex items-center justify-center">
+          <button class="relative w-10 h-6 group overflow-hidden" tabindex="-1">
             <div class="absolute inset-0 bg-[#C40F05]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-[#e61206]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
             <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
           </button>
         </div>
-        <div id="title-logo-text" class="flex flex-row items-center gap-2 absolute top-2 left-3">
-          <img src="/src/img/icons/81.ico" alt="GitHub" class="w-5 h-5" />
-          <p class="text-black">Frutiger Aero</p>
+        <div class="win7-titlebar">
+          <img src="/src/img/icons/planete.ico" alt="ClearSky" class="w-5 h-5" />
+          <p class="win7-titlebar-label">Accueil - ClearSky Archiving</p>
         </div>
-      </div>
-
-
-
-      <div id="container" class="h-120 w-full max-w-[72rem] rounded-md bg-white/6 backdrop-blur-[1px] shadow-[inset_0px_0px_10px_4px_rgba(255,_255,_255,_0.35),_0px_0px_6px_3px_rgba(0,_0,_0,_0.22)] p-3 pt-9.5 relative overflow-hidden mx-auto flex flex-col my-5">
-        <div id="content" class="bg-white w-full flex-1 shadow-[0px_0px_10px_2px_rgba(255,_255,_255,_0.22),_inset_0px_0px_6px_0px_rgba(0,_0,_0,_0.28),_inset_0px_14px_14px_-12px_rgba(0,_0,_0,_0.28)] p-5">
-          <p>lorem ipsum dolor sit amet blablabla</p>
+        <div class="win7-inner">
+          <div class="grid grid-cols-[1.2fr_0.8fr] bg-white/65">
+            <div class="space-y-5 p-6">
+              <h1 class="text-[48px] leading-[1.05] font-open-sans font-semibold text-[#111]">Le futur du stockage est déjà là.</h1>
+              <p class="text-[18px] leading-relaxed text-black/75">ClearSky Archiving sécurise vos fichiers en un geste, puis les rend accessibles partout sans sacrifier la simplicité. C'est fluide, clair, et oui, même votre dossier Temporaire_Final_v12 reste sous contrôle.</p>
+              <div class="flex gap-3">
+                <a href="#tarifs" class="cta-win7">Démarrer maintenant</a>
+                <a href="#explorateur" class="cta-win7-soft">Voir la démo</a>
+              </div>
+            </div>
+            <div class="border-l border-black/15 divide-y divide-black/15">
+              <article class="p-4">
+                <p class="text-[13px] text-black/55 mb-1">Disponibilité</p>
+                <p class="text-[24px] font-semibold">99.98%</p>
+              </article>
+              <article class="p-4">
+                <p class="text-[13px] text-black/55 mb-1">Sauvegarde automatique</p>
+                <p class="text-[24px] font-semibold">Toutes les 15 min</p>
+              </article>
+              <article class="p-4">
+                <p class="text-[13px] text-black/55 mb-2">Aperçu rapide</p>
+                <video controls class="w-full rounded-sm border border-black/20" src="/src/video/sea.mp4"></video>
+              </article>
+            </div>
+          </div>
         </div>
-        <div id="buttons-container" class="flex flex-row rounded-b-md overflow-hidden border-x border-b border-black/25 items-end absolute top-0 right-3 shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
+      </section>
+
+      <section id="explorateur" class="win7-shell">
+        <div class="win7-window-buttons" aria-hidden="true">
           <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
             <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
@@ -72,13 +98,261 @@
             <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
           </button>
         </div>
-        <div id="title-logo-text" class="flex flex-row items-center gap-2 absolute top-2 left-3">
-          <img src="/src/img/icons/81.ico" alt="GitHub" class="w-5 h-5" />
-          <p class="text-black">Frutiger Aero</p>
+        <div class="win7-titlebar">
+          <img src="/src/img/icons/explorateur.ico" alt="ClearSky" class="w-5 h-5" />
+          <p class="win7-titlebar-label">Explorateur ClearSky</p>
         </div>
-      </div>
+        <div class="win7-inner">
+          <div class="mb-4 bg-white/70 p-3">
+            <input class="win7-input" type="search" placeholder="Rechercher un fichier, un dossier ou un souvenir oublié..." />
+          </div>
+          <div class="grid grid-cols-[220px_1fr] bg-white/70">
+            <aside class="p-4 border-r border-black/15">
+              <p class="text-[14px] font-semibold mb-3">Dossiers</p>
+              <ul class="space-y-2 text-[14px] text-black/75">
+                <li><i class='bx bx-folder mr-2'></i>Images</li>
+                <li><i class='bx bx-folder mr-2'></i>Vidéos</li>
+                <li><i class='bx bx-folder mr-2'></i>Musiques</li>
+                <li><i class='bx bx-folder mr-2'></i>Documents</li>
+                <li><i class='bx bx-folder mr-2'></i>Archives clients</li>
+              </ul>
+            </aside>
+            <div class="p-4">
+              <table class="w-full text-left text-[14px]">
+                <thead class="text-black/65 border-b border-black/15">
+                  <tr>
+                    <th class="py-2 font-semibold">Nom</th>
+                    <th class="py-2 font-semibold">Type</th>
+                    <th class="py-2 font-semibold">Taille</th>
+                    <th class="py-2 font-semibold">Modifié le</th>
+                  </tr>
+                </thead>
+                <tbody class="text-black/80">
+                  <tr class="border-b border-black/10">
+                    <td class="py-2"><a href="/src/img/bg_img.jpg" class="hover:underline">Horizon_Archive.jpg</a></td>
+                    <td class="py-2">Image JPG</td>
+                    <td class="py-2">4.8 Mo</td>
+                    <td class="py-2">22/03/2026</td>
+                  </tr>
+                  <tr class="border-b border-black/10">
+                    <td class="py-2"><a href="/src/video/sea.mp4" class="hover:underline">Sea_Backup.mp4</a></td>
+                    <td class="py-2">Vidéo MP4</td>
+                    <td class="py-2">72 Mo</td>
+                    <td class="py-2">24/03/2026</td>
+                  </tr>
+                  <tr class="border-b border-black/10">
+                    <td class="py-2"><a href="/src/music/exemple.mp3" class="hover:underline">Ambiance_Cloud.mp3</a></td>
+                    <td class="py-2">Audio MP3</td>
+                    <td class="py-2">8.2 Mo</td>
+                    <td class="py-2">25/03/2026</td>
+                  </tr>
+                  <tr class="border-b border-black/10">
+                    <td class="py-2"><a href="/src/pdf/exemple.pdf" class="hover:underline">Contrat_Stockage.pdf</a></td>
+                    <td class="py-2">Document PDF</td>
+                    <td class="py-2">1.1 Mo</td>
+                    <td class="py-2">21/03/2026</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2">Dossier_Clients</td>
+                    <td class="py-2">Dossier</td>
+                    <td class="py-2">32 fichiers</td>
+                    <td class="py-2">26/03/2026</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="mt-4 pt-3 border-t border-black/15">
+                <p class="text-[14px] mb-2">Espace utilisé : <strong>2.3 To</strong> / 5 To</p>
+                <div class="h-3 rounded-full border border-black/20 bg-white/70 overflow-hidden">
+                  <div class="h-full w-[46%] bg-[linear-gradient(to_right,#9fd7ff,#4aa9f4)]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      
+      <section id="features-social" class="win7-shell">
+        <div class="win7-window-buttons" aria-hidden="true">
+          <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
+            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
+          </button>
+          <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
+            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
+          </button>
+          <button class="relative w-10 h-6 group overflow-hidden px-6 flex items-center justify-center">
+            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
+            <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
+          </button>
+        </div>
+        <div class="win7-titlebar">
+          <img src="/src/img/icons/people.ico" alt="ClearSky" class="w-5 h-5" />
+          <p class="win7-titlebar-label">Caractéristiques et preuve sociale</p>
+        </div>
+        <div class="win7-inner grid grid-cols-2 bg-white/65">
+          <div class="border-r border-black/15">
+            <div class="p-4 border-b border-black/15">
+              <h2 class="text-[22px] font-semibold">Caractéristiques</h2>
+            </div>
+            <div class="divide-y divide-black/15">
+              <article class="flex items-center justify-between gap-4 p-4">
+                <img src="/src/img/icons/sauvegarde.ico" alt="Icône sauvegarde" class="w-10 h-10 object-contain shrink-0" />
+                <div>
+                  <h3 class="text-[20px] font-semibold mb-1">Sauvegarde continue</h3>
+                  <p class="text-[15px] text-black/70">Vos fichiers sont copiés automatiquement en arrière-plan, sans interrompre votre travail ni ralentir votre ordinateur.</p>
+                </div>
+              </article>
+              <article class="flex items-center justify-between gap-4 p-4">
+                <img src="/src/img/icons/recuperation.ico" alt="Icône récupération" class="w-10 h-10 object-contain shrink-0" />
+                <div>
+                  <h3 class="text-[20px] font-semibold mb-1">Récupération rapide</h3>
+                  <p class="text-[15px] text-black/70">Restaurez une version précédente en quelques secondes, même quand vous aviez juré de ne rien supprimer.</p>
+                </div>
+              </article>
+              <article class="flex items-center justify-between gap-4 p-4">
+                <img src="/src/img/icons/controle.ico" alt="Icône contrôle" class="w-10 h-10 object-contain shrink-0" />
+                <div>
+                  <h3 class="text-[20px] font-semibold mb-1">Partage contrôlé</h3>
+                  <p class="text-[15px] text-black/70">Créez des liens sécurisés, réglez les permissions, et gardez un historique clair des accès partagés.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div>
+            <div class="p-4 border-b border-black/15">
+              <h2 class="text-[22px] font-semibold">Preuve sociale</h2>
+            </div>
+            <div class="grid grid-cols-3 divide-x divide-black/15 border-b border-black/15">
+              <article class="text-center p-4">
+                <p class="text-[32px] font-semibold">48 000+</p>
+                <p class="text-[14px] text-black/65">Utilisateurs actifs</p>
+              </article>
+              <article class="text-center p-4">
+                <p class="text-[32px] font-semibold">12,6 M</p>
+                <p class="text-[14px] text-black/65">Fichiers archivés</p>
+              </article>
+              <article class="text-center p-4">
+                <p class="text-[32px] font-semibold">99,98 %</p>
+                <p class="text-[14px] text-black/65">Disponibilité annuelle</p>
+              </article>
+            </div>
+            <div class="grid grid-cols-2 divide-x divide-black/15">
+              <blockquote class="p-4">
+                <p class="text-[15px] text-black/80">"On a migré en une semaine. Même notre équipe la plus sceptique a fini par demander plus d'espace."</p>
+                <footer class="mt-2 text-[14px] text-black/60">Lucie Garnier, Responsable IT</footer>
+              </blockquote>
+              <blockquote class="p-4">
+                <p class="text-[15px] text-black/80">"Simple, lisible, solide. Et pour une fois, le stockage cloud ne ressemble pas à un labyrinthe."</p>
+                <footer class="mt-2 text-[14px] text-black/60">Nassim Cohen, Directeur des opérations</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tarifs" class="win7-shell">
+        <div class="win7-window-buttons" aria-hidden="true">
+          <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
+            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
+          </button>
+          <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
+            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
+          </button>
+          <button class="relative w-10 h-6 group overflow-hidden px-6 flex items-center justify-center">
+            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
+            <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
+          </button>
+        </div>
+        <div class="win7-titlebar">
+          <img src="/src/img/icons/what.ico" alt="ClearSky" class="w-5 h-5" />
+          <p class="win7-titlebar-label">Tarification</p>
+        </div>
+        <div class="win7-inner">
+          <div class="grid grid-cols-3 bg-white/70 divide-x divide-black/15">
+            <article class="p-4">
+              <h3 class="text-[22px] font-semibold">Gratuite</h3>
+              <p class="text-[14px] text-black/65 mb-3">10 Go</p>
+              <ul class="text-[15px] space-y-1 mb-4 text-black/75">
+                <li>- Sauvegarde manuelle</li>
+                <li>- Partage de lien simple</li>
+              </ul>
+              <p class="text-[28px] font-semibold mb-3">0 EUR/mois</p>
+              <a href="#" class="cta-win7-soft">Choisir</a>
+            </article>
+            <article class="p-4 bg-[#eef6ff]">
+              <h3 class="text-[22px] font-semibold">Premium</h3>
+              <p class="text-[14px] text-black/65 mb-3">2 To</p>
+              <ul class="text-[15px] space-y-1 mb-4 text-black/75">
+                <li>- Sauvegarde automatique</li>
+                <li>- Récupération de version 30 jours</li>
+                <li>- Support prioritaire</li>
+              </ul>
+              <p class="text-[28px] font-semibold mb-3">8.99 EUR/mois</p>
+              <a href="#" class="cta-win7">Prendre Premium</a>
+            </article>
+            <article class="p-4">
+              <h3 class="text-[22px] font-semibold">Entreprise</h3>
+              <p class="text-[14px] text-black/65 mb-3">Stockage illimité</p>
+              <ul class="text-[15px] space-y-1 mb-4 text-black/75">
+                <li>- Administration centralisée</li>
+                <li>- Chiffrement avancé</li>
+                <li>- SLA dédié</li>
+              </ul>
+              <p class="text-[28px] font-semibold mb-3">Sur devis</p>
+              <a href="#" class="cta-win7-soft">Contacter l'équipe</a>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer id="footer" class="w-full bg-white/8 backdrop-blur-[2px] border-t border-black/30 shadow-[inset_0px_10px_20px_0px_rgba(255,255,255,0.62),0px_0px_6px_3px_rgba(0,0,0,0.18)]">
+      <div class="max-w-6xl mx-auto px-6 py-6">
+        <div class="grid grid-cols-[1fr_1fr_1fr_1.2fr] divide-x divide-black/15 bg-white/40">
+          <div class="p-4">
+            <h4 class="font-semibold mb-2 text-black">Produit</h4>
+            <ul class="text-[14px] text-black/80 space-y-1">
+              <li><a href="#" class="hover:underline">Fonctionnalités</a></li>
+              <li><a href="#" class="hover:underline">Tarifs</a></li>
+              <li><a href="#" class="hover:underline">Sécurité</a></li>
+            </ul>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold mb-2 text-black">Entreprise</h4>
+            <ul class="text-[14px] text-black/80 space-y-1">
+              <li><a href="#" class="hover:underline">À propos</a></li>
+              <li><a href="#" class="hover:underline">Blog</a></li>
+              <li><a href="#" class="hover:underline">Carrière</a></li>
+            </ul>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold mb-2 text-black">Assistance</h4>
+            <ul class="text-[14px] text-black/80 space-y-1">
+              <li><a href="#" class="hover:underline">Centre d'aide</a></li>
+              <li><a href="#" class="hover:underline">Statut</a></li>
+              <li><a href="#" class="hover:underline">Contact</a></li>
+            </ul>
+          </div>
+          <div class="p-4">
+            <h4 class="font-semibold mb-2 text-black">Newsletter</h4>
+            <p class="text-[14px] text-black/80 mb-3">Recevez les nouveautés produit, les conseils de sauvegarde et une bonne excuse pour trier vos fichiers.</p>
+            <div class="flex gap-2">
+              <input type="email" class="win7-input" placeholder="Votre e-mail" />
+              <button class="cta-win7-soft">S'inscrire</button>
+            </div>
+          </div>
+        </div>
+        <p class="mt-6 pt-4 border-t border-black/15 text-[13px] text-black/70">© 2026 ClearSky Archiving. Tous droits réservés.</p>
+      </div>
+    </footer>
   </body>
 </html>
