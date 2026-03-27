@@ -1,6 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
 
 @theme{
     --font-open-sans: 'Source Sans 3', sans-serif;
+}
+
+@layer components {
+    .cta-win7 {
+        @apply inline-flex items-center justify-center min-w-[106px] h-[30px] px-[18px] rounded-[3px] border border-[#8f8f8f] text-[#1f1f1f] font-open-sans font-semibold text-[21px] leading-none tracking-[0.01em] no-underline cursor-pointer select-none bg-[linear-gradient(to_bottom,#f7f7f7_0%,#efefef_49%,#e4e4e4_50%,#dadada_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.92),inset_0_-1px_0_rgba(0,0,0,0.05),0_1px_0_rgba(255,255,255,0.3)] transition-[border-color,background,box-shadow] duration-[120ms] ease-in;
+    }
+
+    .cta-win7:hover {
+        @apply border-[#2a9fe6] bg-[linear-gradient(to_bottom,#f8fdff_0%,#eff8ff_49%,#dff0ff_50%,#c8e6ff_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.98),inset_0_0_0_1px_rgba(101,190,255,0.35),0_0_0_1px_rgba(54,168,242,0.22)];
+    }
+
+    .cta-win7:active {
+        @apply border-[#2f8fd0] bg-[linear-gradient(to_bottom,#d8ecfc_0%,#c6e3fb_49%,#b4dbfb_50%,#9ccdf4_100%)] shadow-[inset_0_1px_2px_rgba(0,0,0,0.14),inset_0_0_0_1px_rgba(95,171,228,0.38)];
+    }
+
+    .cta-win7:focus-visible {
+        @apply outline-none border-black border-dashed border-2;
+    }
 }
