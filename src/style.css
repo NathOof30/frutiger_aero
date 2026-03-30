@@ -222,7 +222,7 @@
     }
 
     .win7-inner {
-        @apply w-full p-5;
+        @apply w-full;
         background-color: var(--color-inner-bg);
         box-shadow: var(--shadow-inner);
         color: var(--color-text);
