@@ -26,9 +26,23 @@
     --shadow-inner: 0px 0px 10px 2px rgba(255, 255, 255, 0.22), inset 0px 0px 6px 0px rgba(0, 0, 0, 0.22), inset 0px 14px 14px -12px rgba(0, 0, 0, 0.2);
     --shadow-header: inset 0px 10px 24px 0px rgba(255, 255, 255, 0.48), 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
     --shadow-footer: inset 0px 10px 20px 0px rgba(255, 255, 255, 0.38), 0px 0px 6px 2px rgba(0, 0, 0, 0.18);
-    --window-deco-inset: inset 0 0 8px rgba(255, 255, 255, 0.2);
-    --window-deco-gloss-top: rgba(255, 255, 255, 0.26);
-    --window-deco-gloss-bottom: rgba(255, 255, 255, 0.03);
+    --window-deco-inset: inset 0 0 6px rgba(255, 255, 255, 0.13);
+    --window-deco-gloss-top: rgba(255, 255, 255, 0.16);
+    --window-deco-gloss-bottom: rgba(255, 255, 255, 0.015);
+    --window-deco-bottom-top: rgba(255, 255, 255, 0.12);
+    --window-deco-bottom-bottom: rgba(255, 255, 255, 0);
+    --window-deco-hover: 1.015;
+    --window-deco-opacity: 0.92;
+    --window-deco-icon-opacity: 0.88;
+    --scrollbar-rail-bg: linear-gradient(to bottom, rgba(236, 244, 252, 0.7), rgba(208, 221, 238, 0.64));
+    --scrollbar-rail-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+    --scrollbar-btn-bg: linear-gradient(to bottom, #f5f9ff 0%, #e7f0fb 50%, #d8e4f2 100%);
+    --scrollbar-btn-bg-hover: linear-gradient(to bottom, #eef6ff 0%, #dcecfb 50%, #c8ddf0 100%);
+    --scrollbar-btn-bg-active: linear-gradient(to bottom, #d5e8fa 0%, #c2d8ef 50%, #aec7e0 100%);
+    --scrollbar-thumb-bg: linear-gradient(to bottom, #f9fcff 0%, #e7eff8 50%, #d7e1ee 100%);
+    --scrollbar-thumb-bg-hover: linear-gradient(to bottom, #f3f8ff 0%, #dfebf9 50%, #cadbef 100%);
+    --scrollbar-thumb-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.82), 0 1px 2px rgba(0, 0, 0, 0.15);
+    --scrollbar-icon: #4f637a;
     --switch-track-bg: linear-gradient(to bottom, #f8fbff 0%, #e8f1fb 49%, #d8e6f5 50%, #cad9ea 100%);
     --switch-track-border: #8ea1b5;
     --switch-knob-bg: linear-gradient(to bottom, #ffffff 0%, #eef3f8 50%, #d7e1eb 100%);
@@ -75,9 +89,23 @@
     --shadow-inner: 0px 0px 12px 1px rgba(130, 177, 255, 0.14), inset 0px 0px 10px 0px rgba(4, 10, 22, 0.7), inset 0px 16px 16px -14px rgba(155, 201, 255, 0.24);
     --shadow-header: inset 0px 8px 22px 0px rgba(142, 184, 255, 0.16), 0px 0px 8px 2px rgba(0, 0, 0, 0.38);
     --shadow-footer: inset 0px 8px 18px 0px rgba(135, 174, 245, 0.14), 0px 0px 8px 2px rgba(0, 0, 0, 0.34);
-    --window-deco-inset: inset 0 0 8px rgba(164, 203, 255, 0.14);
-    --window-deco-gloss-top: rgba(196, 224, 255, 0.2);
-    --window-deco-gloss-bottom: rgba(196, 224, 255, 0.04);
+    --window-deco-inset: inset 0 0 6px rgba(164, 203, 255, 0.09);
+    --window-deco-gloss-top: rgba(196, 224, 255, 0.12);
+    --window-deco-gloss-bottom: rgba(196, 224, 255, 0.02);
+    --window-deco-bottom-top: rgba(181, 215, 255, 0.09);
+    --window-deco-bottom-bottom: rgba(181, 215, 255, 0);
+    --window-deco-hover: 1.025;
+    --window-deco-opacity: 0.9;
+    --window-deco-icon-opacity: 0.85;
+    --scrollbar-rail-bg: linear-gradient(to bottom, rgba(21, 38, 65, 0.7), rgba(14, 27, 47, 0.7));
+    --scrollbar-rail-shadow: inset 0 1px 0 rgba(184, 219, 255, 0.12), inset 0 -1px 0 rgba(0, 0, 0, 0.36);
+    --scrollbar-btn-bg: linear-gradient(to bottom, #2b4b74 0%, #233f63 50%, #1c3554 100%);
+    --scrollbar-btn-bg-hover: linear-gradient(to bottom, #356090 0%, #2c527a 50%, #244769 100%);
+    --scrollbar-btn-bg-active: linear-gradient(to bottom, #274d77 0%, #223f61 50%, #1b3350 100%);
+    --scrollbar-thumb-bg: linear-gradient(to bottom, #3d6794 0%, #33577e 50%, #2a496b 100%);
+    --scrollbar-thumb-bg-hover: linear-gradient(to bottom, #4c79aa 0%, #40658f 50%, #345676 100%);
+    --scrollbar-thumb-shadow: inset 0 1px 0 rgba(197, 225, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.34);
+    --scrollbar-icon: #c3dcff;
     --switch-track-bg: linear-gradient(to bottom, #2f4360 0%, #27374f 49%, #1f2f45 50%, #1a2639 100%);
     --switch-track-border: #607ca2;
     --switch-knob-bg: linear-gradient(to bottom, #cfdcf0 0%, #b9c9e2 50%, #9baed0 100%);
@@ -211,6 +239,28 @@
         background-image: linear-gradient(to bottom, var(--window-deco-gloss-top), var(--window-deco-gloss-bottom));
     }
 
+    .win7-window-buttons > button > div:first-child {
+        box-shadow: var(--window-deco-inset) !important;
+        opacity: var(--window-deco-opacity);
+        transition: filter 140ms ease;
+    }
+
+    .win7-window-buttons > button:hover > div:first-child {
+        filter: brightness(var(--window-deco-hover));
+    }
+
+    .win7-window-buttons > button > div:nth-child(2) {
+        background-image: linear-gradient(to bottom, var(--window-deco-gloss-top), var(--window-deco-gloss-bottom)) !important;
+    }
+
+    .win7-window-buttons > button > div:last-child {
+        background-image: linear-gradient(to top, var(--window-deco-bottom-top), var(--window-deco-bottom-bottom)) !important;
+    }
+
+    .win7-window-buttons > button > i {
+        opacity: var(--window-deco-icon-opacity);
+    }
+
     .win7-card {
         @apply rounded-md border p-4;
         border-color: var(--color-divider);
@@ -282,6 +332,48 @@
     .theme-toggle:focus-visible {
         @apply outline-none border-dashed border-2;
         border-color: var(--color-input-focus);
+    }
+
+    .explorer-scrollbar {
+        @apply w-4.5 flex flex-col justify-between;
+        background: var(--scrollbar-rail-bg);
+        box-shadow: var(--scrollbar-rail-shadow);
+    }
+
+    .explorer-scroll-btn {
+        @apply h-4.25 w-full flex items-center justify-center transition-[background] duration-120;
+        background: var(--scrollbar-btn-bg);
+    }
+
+    .explorer-scroll-btn:hover {
+        background: var(--scrollbar-btn-bg-hover);
+    }
+
+    .explorer-scroll-btn:active {
+        background: var(--scrollbar-btn-bg-active);
+    }
+
+    .explorer-scroll-track {
+        @apply flex items-center justify-center w-full h-full rounded-xs cursor-pointer transition-[background] duration-120;
+        background: var(--scrollbar-thumb-bg);
+        box-shadow: var(--scrollbar-thumb-shadow);
+    }
+
+    .explorer-scroll-track:hover {
+        background: var(--scrollbar-thumb-bg-hover);
+    }
+
+    .explorer-scroll-icon,
+    .explorer-scroll-grip {
+        color: var(--scrollbar-icon);
+    }
+
+    .explorer-scroll-icon {
+        @apply text-[10px];
+    }
+
+    .explorer-scroll-grip {
+        @apply text-[14px];
     }
 }
 
