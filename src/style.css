@@ -7,7 +7,7 @@
 
 @layer components {
     .cta-win7 {
-        @apply inline-flex items-center justify-center min-w-26.5 h-7.5 px-4.5 rounded-[3px] border border-[#8f8f8f] text-[#1f1f1f] font-open-sans font-semibold text-[21px] leading-none tracking-[0.01em] no-underline cursor-pointer select-none bg-[linear-gradient(to_bottom,#f7f7f7_0%,#efefef_49%,#e4e4e4_50%,#dadada_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.92),inset_0_-1px_0_rgba(0,0,0,0.05),0_1px_0_rgba(255,255,255,0.3)] transition-[border-color,background,box-shadow] duration-120 ease-in;
+        @apply inline-flex items-center justify-center min-w-26.5 h-7.5 px-4.5 rounded-[3px] border border-[#8f8f8f] text-[#1f1f1f] font-open-sans font-semibold text-[18px] leading-none tracking-[0.01em] no-underline cursor-pointer select-none bg-[linear-gradient(to_bottom,#f7f7f7_0%,#efefef_49%,#e4e4e4_50%,#dadada_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.92),inset_0_-1px_0_rgba(0,0,0,0.05),0_1px_0_rgba(255,255,255,0.3)] transition-[border-color,background,box-shadow] duration-120 ease-in;
     }
 
     .cta-win7:hover {
