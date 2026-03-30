@@ -404,6 +404,108 @@
     .explorer-scroll-grip {
         @apply text-[14px];
     }
+
+    .mobile-menu-toggle,
+    .mobile-menu-close {
+        @apply inline-flex items-center justify-center w-11 h-11 rounded-[3px] border;
+        border-color: var(--color-border);
+        color: var(--nav-text);
+        background-color: transparent;
+    }
+
+    .mobile-menu-toggle:focus-visible,
+    .mobile-menu-close:focus-visible {
+        @apply outline-none border-dashed border-2;
+        border-color: var(--color-input-focus);
+    }
+
+    .mobile-menu-backdrop {
+        @apply fixed inset-0 z-40;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .mobile-menu-panel {
+        @apply fixed top-0 left-0 h-screen w-[88%] max-w-[340px] z-50 border-r;
+        background-color: var(--color-inner-bg);
+        border-color: var(--color-border);
+        box-shadow: var(--shadow-shell);
+        animation: menu-slide-in 220ms ease-out;
+    }
+
+    .mobile-menu-link {
+        @apply flex items-center w-full min-h-11 px-3 text-[16px] rounded-[3px] border;
+        border-color: var(--color-divider);
+        color: var(--nav-text);
+    }
+
+    .mobile-menu-link:hover {
+        color: var(--nav-text-hover);
+    }
+
+    .win7-tab,
+    .win7-tab-active {
+        @apply inline-flex items-center justify-center min-h-11 px-3 rounded-[3px] border text-[14px] whitespace-nowrap;
+        border-color: var(--color-divider);
+    }
+
+    .win7-tab {
+        color: var(--nav-text);
+    }
+
+    .win7-tab-active {
+        color: var(--nav-text-hover);
+        font-weight: 600;
+    }
+
+    .explorer-mobile-row {
+        @apply flex flex-col gap-0.5 py-3 border-b border-black/10 text-[14px] text-black/80;
+    }
+
+    .explorer-mobile-row:last-child {
+        border-bottom: 0;
+    }
+}
+
+@keyframes menu-slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .win7-input {
+        min-height: 44px;
+    }
+
+    .cta-win7,
+    .cta-win7-soft,
+    .win7-nav-link {
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 639px) {
+    .win7-window-buttons,
+    #buttons-container,
+    .explorer-scrollbar {
+        display: none !important;
+    }
+
+    .win7-shell {
+        padding-top: 2.2rem;
+    }
+
+    .win7-inner {
+        padding: 0.9rem;
+    }
 }
 
 .theme-animated,
