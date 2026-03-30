@@ -126,25 +126,25 @@
               <div class="p-4">
                 <p class="text-[14px] font-semibold mb-3">Dossiers</p>
                 <ul class="space-y-2 text-[14px] text-black/75">
-                  <li class="flex items-center gap-2"><img src="/src/img/icons/image.ico" alt="Icône dossier" class="w-4 h-4 object-contain shrink-0" />Images</li>
-                  <li class="flex items-center gap-2"><img src="/src/img/icons/video.ico" alt="Icône dossier" class="w-4 h-4 object-contain shrink-0" />Vidéos</li>
-                  <li class="flex items-center gap-2"><img src="/src/img/icons/music.ico" alt="Icône dossier" class="w-4 h-4 object-contain shrink-0" />Musiques</li>
-                  <li class="flex items-center gap-2"><img src="/src/img/icons/doc.ico" alt="Icône dossier" class="w-4 h-4 object-contain shrink-0" />Documents</li>
-                  <li class="flex items-center gap-2"><img src="/src/img/icons/zip.ico" alt="Icône dossier" class="w-4 h-4 object-contain shrink-0" />Archives clients</li>
+                  <li class="flex items-center gap-2"><img src="/src/img/icons/image.ico" alt="Icône dossier" class="w-5 h-5 object-contain shrink-0" />Images</li>
+                  <li class="flex items-center gap-2"><img src="/src/img/icons/video.ico" alt="Icône dossier" class="w-5 h-5 object-contain shrink-0" />Vidéos</li>
+                  <li class="flex items-center gap-2"><img src="/src/img/icons/music.ico" alt="Icône dossier" class="w-5 h-5 object-contain shrink-0" />Musiques</li>
+                  <li class="flex items-center gap-2"><img src="/src/img/icons/doc.ico" alt="Icône dossier" class="w-5 h-5 object-contain shrink-0" />Documents</li>
+                  <li class="flex items-center gap-2"><img src="/src/img/icons/zip.ico" alt="Icône dossier" class="w-5 h-5 object-contain shrink-0" />Archives clients</li>
                 </ul>
               </div>
 
-              <div class="w-4.5 bg-[#f0f0f0] border-l border-black/10 flex flex-col justify-between shrink-0">
-                <button class="h-4.25 w-full bg-linear-to-b from-[#f4f4f4] to-[#e0e0e0] border-b border-black/10 flex items-center justify-center hover:bg-[#d8e0ed] active:bg-[#b0c4de]">
-                  <i class='bx bx-caret-up text-[10px] text-gray-600'></i>
+              <div class="explorer-scrollbar shrink-0">
+                <button class="explorer-scroll-btn" type="button" tabindex="-1" aria-hidden="true">
+                  <i class='bx bx-caret-up explorer-scroll-icon'></i>
                 </button>
                 <div class="flex-1 relative">
-                  <div class="flex items-center top-0 w-full h-full rounded-xs border border-[#969b9e] bg-linear-to-r from-[#f0f0f0] via-[#cfd1d3] to-[#e4e5e7] hover:via-[#b8bcc2] shadow-[inset_1px_1px_0_rgba(255,255,255,0.8)] cursor-pointer">
-                    <i class='bx bx-menu text-gray-700'></i>
+                  <div class="explorer-scroll-track">
+                    <i class='bx bx-menu explorer-scroll-grip'></i>
                   </div>
                 </div>
-                <button class="h-4.25 w-full flex items-center justify-center">
-                  <i class='bx bx-caret-down text-[10px] text-gray-600'></i>
+                <button class="explorer-scroll-btn" type="button" tabindex="-1" aria-hidden="true">
+                  <i class='bx bx-caret-down explorer-scroll-icon'></i>
                 </button>
               </div>
 
@@ -171,27 +171,57 @@
                         <td class="py-2">22/03/2026</td>
                       </tr>
                       <tr class="border-b border-black/10 hover:bg-[#e5f3ff] hover:border-[#cce8ff] transition-colors">
+                        <td class="py-2"><a href="/src/img/bg_img_night.jpg" class="hover:underline">Skyline_Night.jpg</a></td>
+                        <td class="py-2">Image JPG</td>
+                        <td class="py-2">724 Ko</td>
+                        <td class="py-2">29/03/2026</td>
+                      </tr>
+                      <tr class="border-b border-black/10 hover:bg-[#e5f3ff] hover:border-[#cce8ff] transition-colors">
+                        <td class="py-2"><a href="/src/img/bg_img_night_test.png" class="hover:underline">Skyline_Night_Test.png</a></td>
+                        <td class="py-2">Image PNG</td>
+                        <td class="py-2">1.4 Mo</td>
+                        <td class="py-2">29/03/2026</td>
+                      </tr>
+                      <tr class="border-b border-black/10 hover:bg-[#e5f3ff] hover:border-[#cce8ff] transition-colors">
+                        <td class="py-2"><a href="/src/img/github.png" class="hover:underline">GitHub_Logo.png</a></td>
+                        <td class="py-2">Image PNG</td>
+                        <td class="py-2">96 Ko</td>
+                        <td class="py-2">27/03/2026</td>
+                      </tr>
+                      <tr class="border-b border-black/10 hover:bg-[#e5f3ff] hover:border-[#cce8ff] transition-colors">
                         <td class="py-2"><a href="/src/video/sea.mp4" class="hover:underline">Sea_Backup.mp4</a></td>
                         <td class="py-2">Vidéo MP4</td>
                         <td class="py-2">72 Mo</td>
                         <td class="py-2">24/03/2026</td>
+                      </tr>
+                      <tr class="border-b border-black/10 hover:bg-[#e5f3ff] hover:border-[#cce8ff] transition-colors">
+                        <td class="py-2"><a href="/src/music/exemple.mp3" class="hover:underline">Ambiance_Cloud.mp3</a></td>
+                        <td class="py-2">Audio MP3</td>
+                        <td class="py-2">8.2 Mo</td>
+                        <td class="py-2">25/03/2026</td>
+                      </tr>
+                      <tr class="hover:bg-[#e5f3ff] hover:border-[#cce8ff] transition-colors">
+                        <td class="py-2"><a href="/src/pdf/exemple.pdf" class="hover:underline">Contrat_Stockage.pdf</a></td>
+                        <td class="py-2">Document PDF</td>
+                        <td class="py-2">1.1 Mo</td>
+                        <td class="py-2">21/03/2026</td>
                       </tr>
                       </tbody>
                   </table>
                 </div>
 
               
-                <div class="w-4.5 bg-[#f0f0f0] border-l border-black/10 flex flex-col justify-between shrink-0">
-                  <button class="h-4.25 w-full bg-linear-to-b from-[#f4f4f4] to-[#e0e0e0] border-b border-black/10 flex items-center justify-center hover:bg-[#d8e0ed] active:bg-[#b0c4de]">
-                    <i class='bx bx-caret-up text-[10px] text-gray-600'></i>
+                <div class="explorer-scrollbar shrink-0">
+                  <button class="explorer-scroll-btn" type="button" tabindex="-1" aria-hidden="true">
+                    <i class='bx bx-caret-up explorer-scroll-icon'></i>
                   </button>
                   <div class="flex-1 relative">
-                    <div class="flex items-center top-0 w-full h-full rounded-xs border border-[#969b9e] bg-linear-to-r from-[#f0f0f0] via-[#cfd1d3] to-[#e4e5e7] hover:via-[#b8bcc2] shadow-[inset_1px_1px_0_rgba(255,255,255,0.8)] cursor-pointer">
-                      <i class='bx bx-menu text-gray-700'></i>
+                    <div class="explorer-scroll-track">
+                      <i class='bx bx-menu explorer-scroll-grip'></i>
                     </div>
                   </div>
-                  <button class="h-4.25 w-full flex items-center justify-center">
-                    <i class='bx bx-caret-down text-[10px] text-gray-600'></i>
+                  <button class="explorer-scroll-btn" type="button" tabindex="-1" aria-hidden="true">
+                    <i class='bx bx-caret-down explorer-scroll-icon'></i>
                   </button>
                 </div>
               </div>
