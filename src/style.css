@@ -249,12 +249,19 @@
 
     .win7-window-buttons > button > div:first-child {
         box-shadow: var(--window-deco-inset) !important;
+    }
+
+    .win7-window-buttons > button:hover > div:first-child {
+        filter: brightness(var(--window-deco-hover));
+    }
+
+    .theme-night .win7-window-buttons > button > div:first-child {
         opacity: var(--window-deco-opacity);
         filter: var(--window-deco-filter);
         transition: filter 140ms ease;
     }
 
-    .win7-window-buttons > button:hover > div:first-child {
+    .theme-night .win7-window-buttons > button:hover > div:first-child {
         filter: var(--window-deco-filter-hover) brightness(var(--window-deco-hover));
     }
 
@@ -266,7 +273,7 @@
         background-image: linear-gradient(to top, var(--window-deco-bottom-top), var(--window-deco-bottom-bottom)) !important;
     }
 
-    .win7-window-buttons > button > i {
+    .theme-night .win7-window-buttons > button > i {
         opacity: var(--window-deco-icon-opacity);
     }
 
