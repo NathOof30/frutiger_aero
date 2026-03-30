@@ -27,7 +27,11 @@
     }
 
     .cta-win7-soft:hover {
-        @apply border-[#2a9fe6] bg-[linear-gradient(to_bottom,#ffffff_0%,#f2f9ff_49%,#e7f3ff_50%,#d3e9ff_100%)];
+        @apply border-[#2a9fe6] bg-[linear-gradient(to_bottom,#f8fdff_0%,#eff8ff_49%,#dff0ff_50%,#c8e6ff_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.98),inset_0_0_0_1px_rgba(101,190,255,0.35),0_0_0_1px_rgba(54,168,242,0.22)];
+    }
+
+    .cta-win7-soft:active {
+        @apply border-[#2f8fd0] bg-[linear-gradient(to_bottom,#d8ecfc_0%,#c6e3fb_49%,#b4dbfb_50%,#9ccdf4_100%)] shadow-[inset_0_1px_2px_rgba(0,0,0,0.14),inset_0_0_0_1px_rgba(95,171,228,0.38)];
     }
 
     .cta-win7-soft:focus-visible {
