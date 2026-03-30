@@ -109,70 +109,98 @@
           <img src="/src/img/icons/explorateur.ico" alt="ClearSky" class="w-5 h-5" />
           <p class="win7-titlebar-label">Explorateur ClearSky</p>
         </div>
+
         <div class="win7-inner">
           <div class="mb-4 bg-white/70 p-3">
             <input class="win7-input" type="search" placeholder="Rechercher un fichier, un dossier ou un souvenir oublié..." />
           </div>
-          <div class="grid grid-cols-[220px_1fr] bg-white/70">
-            <aside class="p-4 border-r border-black/15">
-              <p class="text-[14px] font-semibold mb-3">Dossiers</p>
-              <ul class="space-y-2 text-[14px] text-black/75">
-                <li><i class='bx bx-folder mr-2'></i>Images</li>
-                <li><i class='bx bx-folder mr-2'></i>Vidéos</li>
-                <li><i class='bx bx-folder mr-2'></i>Musiques</li>
-                <li><i class='bx bx-folder mr-2'></i>Documents</li>
-                <li><i class='bx bx-folder mr-2'></i>Archives clients</li>
-              </ul>
+
+          <div class="grid grid-cols-[220px_1fr] bg-white/70 h-[380px] border-t border-black/10">
+            
+            <aside class="flex h-full border-r border-black/15">
+              <div class="p-4 flex-1 overflow-hidden">
+                <p class="text-[14px] font-semibold mb-3">Dossiers</p>
+                <ul class="space-y-2 text-[14px] text-black/75">
+                  <li><i class='bx bx-folder mr-2'></i>Images</li>
+                  <li><i class='bx bx-folder mr-2'></i>Vidéos</li>
+                  <li><i class='bx bx-folder mr-2'></i>Musiques</li>
+                  <li><i class='bx bx-folder mr-2'></i>Documents</li>
+                  <li><i class='bx bx-folder mr-2'></i>Archives clients</li>
+                </ul>
+              </div>
+              
+              <div class="w-4.5 bg-[#f0f0f0] border-l border-black/10 flex flex-col justify-between shrink-0">
+                <button class="h-4.25 w-full bg-linear-to-b from-[#f4f4f4] to-[#e0e0e0] border-b border-black/10 flex items-center justify-center hover:bg-[#d8e0ed] active:bg-[#b0c4de]">
+                  <i class='bx bx-caret-up text-[10px] text-gray-600'></i>
+                </button>
+                
+                <div class="flex-1 relative">
+                  <div class="flex items-center top-0 w-full h-full rounded-xs border border-[#969b9e] bg-linear-to-r from-[#f0f0f0] via-[#cfd1d3] to-[#e4e5e7] hover:via-[#b8bcc2] shadow-[inset_1px_1px_0_rgba(255,255,255,0.8)] cursor-pointer">
+                    <i class='bx bx-menu text-gray-700'></i>
+                  </div>
+                </div>
+
+                <button class="h-4.25 w-full flex items-center justify-center">
+                  <i class='bx bx-caret-down text-[10px] text-gray-600'></i>
+                </button>
+              </div>
             </aside>
-            <div class="p-4">
-              <table class="w-full text-left text-[14px]">
-                <thead class="text-black/65 border-b border-black/15">
-                  <tr>
-                    <th class="py-2 font-semibold">Nom</th>
-                    <th class="py-2 font-semibold">Type</th>
-                    <th class="py-2 font-semibold">Taille</th>
-                    <th class="py-2 font-semibold">Modifié le</th>
-                  </tr>
-                </thead>
-                <tbody class="text-black/80">
-                  <tr class="border-b border-black/10">
-                    <td class="py-2"><a href="/src/img/bg_img.jpg" class="hover:underline">Horizon_Archive.jpg</a></td>
-                    <td class="py-2">Image JPG</td>
-                    <td class="py-2">4.8 Mo</td>
-                    <td class="py-2">22/03/2026</td>
-                  </tr>
-                  <tr class="border-b border-black/10">
-                    <td class="py-2"><a href="/src/video/sea.mp4" class="hover:underline">Sea_Backup.mp4</a></td>
-                    <td class="py-2">Vidéo MP4</td>
-                    <td class="py-2">72 Mo</td>
-                    <td class="py-2">24/03/2026</td>
-                  </tr>
-                  <tr class="border-b border-black/10">
-                    <td class="py-2"><a href="/src/music/exemple.mp3" class="hover:underline">Ambiance_Cloud.mp3</a></td>
-                    <td class="py-2">Audio MP3</td>
-                    <td class="py-2">8.2 Mo</td>
-                    <td class="py-2">25/03/2026</td>
-                  </tr>
-                  <tr class="border-b border-black/10">
-                    <td class="py-2"><a href="/src/pdf/exemple.pdf" class="hover:underline">Contrat_Stockage.pdf</a></td>
-                    <td class="py-2">Document PDF</td>
-                    <td class="py-2">1.1 Mo</td>
-                    <td class="py-2">21/03/2026</td>
-                  </tr>
-                  <tr>
-                    <td class="py-2">Dossier_Clients</td>
-                    <td class="py-2">Dossier</td>
-                    <td class="py-2">32 fichiers</td>
-                    <td class="py-2">26/03/2026</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="mt-4 pt-3 border-t border-black/15">
+
+            <div class="flex flex-col h-full">
+              
+              <div class="flex flex-1 overflow-hidden">
+                <div class="p-4 flex-1">
+                  <table class="w-full text-left text-[14px]">
+                    <thead class="text-black/65 border-b border-black/15">
+                      <tr>
+                        <th class="py-2 font-semibold">Nom</th>
+                        <th class="py-2 font-semibold">Type</th>
+                        <th class="py-2 font-semibold">Taille</th>
+                        <th class="py-2 font-semibold">Modifié le</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-black/80">
+                      <tr class="border-b border-black/10 hover:bg-[#e5f3ff] hover:border-[#cce8ff] transition-colors">
+                        <td class="py-2"><a href="/src/img/bg_img.jpg" class="hover:underline">Horizon_Archive.jpg</a></td>
+                        <td class="py-2">Image JPG</td>
+                        <td class="py-2">4.8 Mo</td>
+                        <td class="py-2">22/03/2026</td>
+                      </tr>
+                      <tr class="border-b border-black/10 hover:bg-[#e5f3ff] hover:border-[#cce8ff] transition-colors">
+                        <td class="py-2"><a href="/src/video/sea.mp4" class="hover:underline">Sea_Backup.mp4</a></td>
+                        <td class="py-2">Vidéo MP4</td>
+                        <td class="py-2">72 Mo</td>
+                        <td class="py-2">24/03/2026</td>
+                      </tr>
+                      </tbody>
+                  </table>
+                </div>
+
+              
+              <div class="w-4.5 bg-[#f0f0f0] border-l border-black/10 flex flex-col justify-between shrink-0">
+                <button class="h-4.25 w-full bg-linear-to-b from-[#f4f4f4] to-[#e0e0e0] border-b border-black/10 flex items-center justify-center hover:bg-[#d8e0ed] active:bg-[#b0c4de]">
+                  <i class='bx bx-caret-up text-[10px] text-gray-600'></i>
+                </button>
+                
+                <div class="flex-1 relative">
+                  <div class="flex items-center top-0 w-full h-full rounded-xs border border-[#969b9e] bg-linear-to-r from-[#f0f0f0] via-[#cfd1d3] to-[#e4e5e7] hover:via-[#b8bcc2] shadow-[inset_1px_1px_0_rgba(255,255,255,0.8)] cursor-pointer">
+                    <i class='bx bx-menu text-gray-700'></i>
+                  </div>
+                </div>
+
+                <button class="h-4.25 w-full flex items-center justify-center">
+                  <i class='bx bx-caret-down text-[10px] text-gray-600'></i>
+                </button>
+              </div>
+              </div>
+
+              <div class="p-4 pt-3 border-t border-black/15 bg-white/40 shrink-0">
                 <p class="text-[14px] mb-2">Espace utilisé : <strong>2.3 To</strong> / 5 To</p>
                 <div class="h-3 rounded-full border border-black/20 bg-white/70 overflow-hidden">
                   <div class="h-full w-[46%] bg-[linear-gradient(to_right,#9fd7ff,#4aa9f4)]"></div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
