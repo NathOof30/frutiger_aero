@@ -8,9 +8,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="/src/img/icons/logo.ico" />
   </head>
-  <body class="bg-[url(/img/bg_img.jpg)] bg-fixed bg-cover min-h-screen">
+  <body class="site-surface theme-night theme-animated min-h-screen">
 
-    <header class="sticky top-0 z-30 h-14 w-full bg-white/8 backdrop-blur-[2px] border-b border-black/30 shadow-[inset_0px_10px_26px_0px_rgba(255,255,255,0.78),0px_0px_6px_3px_rgba(0,0,0,0.22)]">
+    <header class="win7-header">
       <div class="max-w-6xl h-full mx-auto px-6 flex items-center justify-between">
         <div class="flex items-center gap-2">
           <img src="/src/img/icons/logo.ico" alt="ClearSky" class="w-8 h-8" />
@@ -23,6 +23,13 @@
           <a href="#footer" class="win7-nav-link">Assistance</a>
         </nav>
         <div class="flex items-center gap-2">
+          <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Basculer entre thème clair et sombre" aria-pressed="true">
+            <span class="theme-toggle-track">
+              <i class='bx bx-sun theme-toggle-icon theme-toggle-icon-sun' aria-hidden="true"></i>
+              <i class='bx bx-moon theme-toggle-icon theme-toggle-icon-moon' aria-hidden="true"></i>
+              <span class="theme-toggle-knob" aria-hidden="true"></span>
+            </span>
+          </button>
           <a href="#" class="cta-win7-soft">Connexion</a>
           <a href="#" class="cta-win7">Inscription</a>
         </div>
@@ -33,18 +40,18 @@
       <section id="hero" class="win7-shell">
         <div class="win7-window-buttons" aria-hidden="true">
           <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
-            <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#4e6296]"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <div class="absolute inset-0 win7-window-surface bg-[#3E4E77]/80 group-hover:bg-[#4e6296]"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
           </button>
           <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
-            <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#4e6296]"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <div class="absolute inset-0 win7-window-surface bg-[#3E4E77]/80 group-hover:bg-[#4e6296]"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
           </button>
           <button class="relative w-10 h-6 group overflow-hidden" tabindex="-1">
-            <div class="absolute inset-0 bg-[#C40F05]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-[#e61206]"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
+            <div class="absolute inset-0 win7-window-surface bg-[#C40F05]/80 group-hover:bg-[#e61206]"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
           </button>
         </div>
@@ -83,18 +90,18 @@
       <section id="explorateur" class="win7-shell">
         <div class="win7-window-buttons" aria-hidden="true">
           <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
-            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <div class="absolute inset-0 win7-window-surface bg-white/10 group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
           </button>
           <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
-            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <div class="absolute inset-0 win7-window-surface bg-white/10 group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
           </button>
           <button class="relative w-10 h-6 group overflow-hidden px-6 flex items-center justify-center">
-            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-white/20"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
+            <div class="absolute inset-0 win7-window-surface bg-white/10 group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
           </button>
         </div>
@@ -174,18 +181,18 @@
       <section id="features-social" class="win7-shell">
         <div class="win7-window-buttons" aria-hidden="true">
           <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
-            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <div class="absolute inset-0 win7-window-surface bg-white/10 group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
           </button>
           <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
-            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <div class="absolute inset-0 win7-window-surface bg-white/10 group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
           </button>
           <button class="relative w-10 h-6 group overflow-hidden px-6 flex items-center justify-center">
-            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-white/20"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
+            <div class="absolute inset-0 win7-window-surface bg-white/10 group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
           </button>
         </div>
@@ -254,18 +261,18 @@
       <section id="tarifs" class="win7-shell">
         <div class="win7-window-buttons" aria-hidden="true">
           <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
-            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <div class="absolute inset-0 win7-window-surface bg-white/10 group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
           </button>
           <button class="relative w-10 h-6 group border-r border-black/40 overflow-hidden">
-            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-white/20"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <div class="absolute inset-0 win7-window-surface bg-white/10 group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
           </button>
           <button class="relative w-10 h-6 group overflow-hidden px-6 flex items-center justify-center">
-            <div class="absolute inset-0 bg-white/10 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-white/20"></div>
-            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
+            <div class="absolute inset-0 win7-window-surface bg-white/10 group-hover:bg-white/20"></div>
+            <div class="absolute inset-0 h-[50%] win7-window-gloss"></div>
             <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]"></i>
           </button>
         </div>
@@ -318,7 +325,7 @@
       </section>
     </main>
 
-    <footer id="footer" class="w-full bg-white/8 backdrop-blur-[2px] border-t border-black/30 shadow-[inset_0px_10px_20px_0px_rgba(255,255,255,0.62),0px_0px_6px_3px_rgba(0,0,0,0.18)]">
+    <footer id="footer" class="win7-footer">
       <div class="max-w-6xl mx-auto px-6 py-6">
         <div class="grid grid-cols-[1fr_1fr_1fr_1.2fr] divide-x divide-black/15 bg-white/40">
           <div class="p-4">
@@ -357,5 +364,34 @@
         <p class="mt-6 pt-4 border-t border-black/15 text-[13px] text-black/70">© 2026 ClearSky Archiving. Tous droits réservés.</p>
       </div>
     </footer>
+
+    <script>
+      (() => {
+        const storageKey = 'clearsky-theme';
+        const body = document.body;
+        const toggle = document.getElementById('theme-toggle');
+
+        if (!toggle) {
+          return;
+        }
+
+        const applyTheme = (theme) => {
+          const isNight = theme === 'dark';
+          body.classList.toggle('theme-night', isNight);
+          toggle.setAttribute('aria-pressed', String(isNight));
+          toggle.setAttribute('aria-label', isNight ? 'Passer en thème clair' : 'Passer en thème sombre');
+        };
+
+        const savedTheme = localStorage.getItem(storageKey);
+        const initialTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+        applyTheme(initialTheme);
+
+        toggle.addEventListener('click', () => {
+          const nextTheme = body.classList.contains('theme-night') ? 'light' : 'dark';
+          applyTheme(nextTheme);
+          localStorage.setItem(storageKey, nextTheme);
+        });
+      })();
+    </script>
   </body>
 </html>
