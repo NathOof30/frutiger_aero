@@ -8,9 +8,9 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="/src/img/icons/logo.ico" />
   </head>
-  <body class="bg-[url(/img/bg_img.jpg)] bg-fixed bg-cover min-h-screen">
+  <body class="site-surface theme-night theme-animated min-h-screen">
 
-    <header class="sticky top-0 z-30 h-14 w-full bg-white/8 backdrop-blur-[2px] border-b border-black/30 shadow-[inset_0px_10px_26px_0px_rgba(255,255,255,0.78),0px_0px_6px_3px_rgba(0,0,0,0.22)]">
+    <header class="win7-header">
       <div class="max-w-6xl h-full mx-auto px-6 flex items-center justify-between">
         <div class="flex items-center gap-2">
           <img src="/src/img/icons/logo.ico" alt="ClearSky" class="w-8 h-8" />
@@ -23,6 +23,13 @@
           <a href="#footer" class="win7-nav-link">Assistance</a>
         </nav>
         <div class="flex items-center gap-2">
+          <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Basculer entre thème clair et sombre" aria-pressed="true">
+            <span class="theme-toggle-track">
+              <i class='bx bx-sun theme-toggle-icon theme-toggle-icon-sun' aria-hidden="true"></i>
+              <i class='bx bx-moon theme-toggle-icon theme-toggle-icon-moon' aria-hidden="true"></i>
+              <span class="theme-toggle-knob" aria-hidden="true"></span>
+            </span>
+          </button>
           <a href="#" class="cta-win7-soft">Connexion</a>
           <a href="#" class="cta-win7">Inscription</a>
         </div>
@@ -60,7 +67,7 @@
           <div class="grid grid-cols-[1.2fr_0.8fr] bg-white/65">
             <div class="space-y-5 p-6">
               <h1 class="text-[44px] leading-[1.05] font-open-sans font-semibold text-[#111]">Le futur du stockage est déjà là.</h1>
-              <p class="text-[18px] leading-relaxed text-black/75">ClearSky Archiving sécurise vos fichiers en un geste, puis les rend accessibles partout sans sacrifier la simplicité. C'est fluide, clair, et oui, même votre dossier Temporaire_Final_v12 reste sous contrôle.</p>
+              <p class="text-[18px] leading-relaxed text-black/75">ClearSky Archiving sécurise vos fichiers en un geste, puis les rend accessibles partout sans sacrifier la simplicité. C'est fluide, clair, et oui, même votre dossier "ergfoizef" reste sous contrôle.</p>
               <div class="flex gap-3">
                 <a href="#tarifs" class="cta-win7">Démarrer maintenant</a>
                 <a href="#explorateur" class="cta-win7-soft">Voir la démo</a>
@@ -114,36 +121,33 @@
           <div class="mb-4 bg-white/70 p-3">
             <input class="win7-input" type="search" placeholder="Rechercher un fichier, un dossier ou un souvenir oublié..." />
           </div>
-
-          <div class="grid grid-cols-[220px_1fr] bg-white/70 h-[380px] border-t border-black/10">
-            
-            <aside class="flex h-full border-r border-black/15">
-              <div class="p-4 flex-1 overflow-hidden">
+          <div class="grid grid-cols-[220px_1fr] bg-white/70">
+            <aside class="flex h-full justify-between">
+              <div class="p-4">
                 <p class="text-[14px] font-semibold mb-3">Dossiers</p>
                 <ul class="space-y-2 text-[14px] text-black/75">
-                  <li><i class='bx bx-folder mr-2'></i>Images</li>
-                  <li><i class='bx bx-folder mr-2'></i>Vidéos</li>
-                  <li><i class='bx bx-folder mr-2'></i>Musiques</li>
-                  <li><i class='bx bx-folder mr-2'></i>Documents</li>
-                  <li><i class='bx bx-folder mr-2'></i>Archives clients</li>
+                  <li class="flex items-center gap-2"><img src="/src/img/icons/image.ico" alt="Icône dossier" class="w-4 h-4 object-contain shrink-0" />Images</li>
+                  <li class="flex items-center gap-2"><img src="/src/img/icons/video.ico" alt="Icône dossier" class="w-4 h-4 object-contain shrink-0" />Vidéos</li>
+                  <li class="flex items-center gap-2"><img src="/src/img/icons/music.ico" alt="Icône dossier" class="w-4 h-4 object-contain shrink-0" />Musiques</li>
+                  <li class="flex items-center gap-2"><img src="/src/img/icons/doc.ico" alt="Icône dossier" class="w-4 h-4 object-contain shrink-0" />Documents</li>
+                  <li class="flex items-center gap-2"><img src="/src/img/icons/zip.ico" alt="Icône dossier" class="w-4 h-4 object-contain shrink-0" />Archives clients</li>
                 </ul>
               </div>
-              
+
               <div class="w-4.5 bg-[#f0f0f0] border-l border-black/10 flex flex-col justify-between shrink-0">
                 <button class="h-4.25 w-full bg-linear-to-b from-[#f4f4f4] to-[#e0e0e0] border-b border-black/10 flex items-center justify-center hover:bg-[#d8e0ed] active:bg-[#b0c4de]">
                   <i class='bx bx-caret-up text-[10px] text-gray-600'></i>
                 </button>
-                
                 <div class="flex-1 relative">
                   <div class="flex items-center top-0 w-full h-full rounded-xs border border-[#969b9e] bg-linear-to-r from-[#f0f0f0] via-[#cfd1d3] to-[#e4e5e7] hover:via-[#b8bcc2] shadow-[inset_1px_1px_0_rgba(255,255,255,0.8)] cursor-pointer">
                     <i class='bx bx-menu text-gray-700'></i>
                   </div>
                 </div>
-
                 <button class="h-4.25 w-full flex items-center justify-center">
                   <i class='bx bx-caret-down text-[10px] text-gray-600'></i>
                 </button>
               </div>
+
             </aside>
 
             <div class="flex flex-col h-full">
@@ -177,21 +181,19 @@
                 </div>
 
               
-              <div class="w-4.5 bg-[#f0f0f0] border-l border-black/10 flex flex-col justify-between shrink-0">
-                <button class="h-4.25 w-full bg-linear-to-b from-[#f4f4f4] to-[#e0e0e0] border-b border-black/10 flex items-center justify-center hover:bg-[#d8e0ed] active:bg-[#b0c4de]">
-                  <i class='bx bx-caret-up text-[10px] text-gray-600'></i>
-                </button>
-                
-                <div class="flex-1 relative">
-                  <div class="flex items-center top-0 w-full h-full rounded-xs border border-[#969b9e] bg-linear-to-r from-[#f0f0f0] via-[#cfd1d3] to-[#e4e5e7] hover:via-[#b8bcc2] shadow-[inset_1px_1px_0_rgba(255,255,255,0.8)] cursor-pointer">
-                    <i class='bx bx-menu text-gray-700'></i>
+                <div class="w-4.5 bg-[#f0f0f0] border-l border-black/10 flex flex-col justify-between shrink-0">
+                  <button class="h-4.25 w-full bg-linear-to-b from-[#f4f4f4] to-[#e0e0e0] border-b border-black/10 flex items-center justify-center hover:bg-[#d8e0ed] active:bg-[#b0c4de]">
+                    <i class='bx bx-caret-up text-[10px] text-gray-600'></i>
+                  </button>
+                  <div class="flex-1 relative">
+                    <div class="flex items-center top-0 w-full h-full rounded-xs border border-[#969b9e] bg-linear-to-r from-[#f0f0f0] via-[#cfd1d3] to-[#e4e5e7] hover:via-[#b8bcc2] shadow-[inset_1px_1px_0_rgba(255,255,255,0.8)] cursor-pointer">
+                      <i class='bx bx-menu text-gray-700'></i>
+                    </div>
                   </div>
+                  <button class="h-4.25 w-full flex items-center justify-center">
+                    <i class='bx bx-caret-down text-[10px] text-gray-600'></i>
+                  </button>
                 </div>
-
-                <button class="h-4.25 w-full flex items-center justify-center">
-                  <i class='bx bx-caret-down text-[10px] text-gray-600'></i>
-                </button>
-              </div>
               </div>
 
               <div class="p-4 pt-3 border-t border-black/15 bg-white/40 shrink-0">
@@ -359,7 +361,7 @@
       </section>
     </main>
 
-    <footer id="footer" class="w-full bg-white/8 backdrop-blur-[2px] border-t border-black/30 shadow-[inset_0px_10px_20px_0px_rgba(255,255,255,0.62),0px_0px_6px_3px_rgba(0,0,0,0.18)]">
+    <footer id="footer" class="win7-footer">
       <div class="max-w-6xl mx-auto px-6 py-6">
         <div class="grid grid-cols-[1fr_1fr_1fr_1.2fr] divide-x divide-black/15 bg-white/40">
           <div class="p-4">
@@ -398,5 +400,34 @@
         <p class="mt-6 pt-4 border-t border-black/15 text-[13px] text-black/70">© 2026 ClearSky Archiving. Tous droits réservés.</p>
       </div>
     </footer>
+
+    <script>
+      (() => {
+        const storageKey = 'clearsky-theme';
+        const body = document.body;
+        const toggle = document.getElementById('theme-toggle');
+
+        if (!toggle) {
+          return;
+        }
+
+        const applyTheme = (theme) => {
+          const isNight = theme === 'dark';
+          body.classList.toggle('theme-night', isNight);
+          toggle.setAttribute('aria-pressed', String(isNight));
+          toggle.setAttribute('aria-label', isNight ? 'Passer en thème clair' : 'Passer en thème sombre');
+        };
+
+        const savedTheme = localStorage.getItem(storageKey);
+        const initialTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : 'dark';
+        applyTheme(initialTheme);
+
+        toggle.addEventListener('click', () => {
+          const nextTheme = body.classList.contains('theme-night') ? 'light' : 'dark';
+          applyTheme(nextTheme);
+          localStorage.setItem(storageKey, nextTheme);
+        });
+      })();
+    </script>
   </body>
 </html>
