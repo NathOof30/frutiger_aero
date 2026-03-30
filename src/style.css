@@ -13,7 +13,8 @@
     --color-text-muted: #4b5564;
     --color-border: rgba(0, 0, 0, 0.22);
     --color-divider: rgba(0, 0, 0, 0.14);
-    --color-shell-bg: rgba(255, 255, 255, 0.08);
+    --color-shell-bg: rgba(255, 255, 255, 0.3);
+    --blur-shell-bg: blur(2px);
     --color-inner-bg: #ffffff;
     --color-panel-bg: rgba(255, 255, 255, 0.7);
     --color-panel-alt-bg: rgba(255, 255, 255, 0.65);
@@ -22,7 +23,7 @@
     --color-input-border: #8f8f8f;
     --color-input-text: #1f1f1f;
     --color-input-focus: #000000;
-    --shadow-shell: inset 0px 0px 10px 4px rgba(255, 255, 255, 0.35), 0px 0px 6px 3px rgba(0, 0, 0, 0.22);
+    --shadow-shell: inset 0px 0px 10px 4px rgba(255, 255, 255, 0.5), 0px 0px 6px 3px rgba(0, 0, 0, 0.22);
     --shadow-inner: 0px 0px 10px 2px rgba(255, 255, 255, 0.22), inset 0px 0px 6px 0px rgba(0, 0, 0, 0.22), inset 0px 14px 14px -12px rgba(0, 0, 0, 0.2);
     --shadow-header: inset 0px 10px 24px 0px rgba(255, 255, 255, 0.48), 0px 0px 6px 2px rgba(0, 0, 0, 0.2);
     --shadow-footer: inset 0px 10px 20px 0px rgba(255, 255, 255, 0.38), 0px 0px 6px 2px rgba(0, 0, 0, 0.18);
@@ -81,6 +82,7 @@
     --color-border: rgba(163, 185, 215, 0.26);
     --color-divider: rgba(163, 185, 215, 0.2);
     --color-shell-bg: rgba(88, 91, 97, 0.55);
+    --blur-shell-bg: blur(2px);
     --color-inner-bg: rgba(10, 19, 35, 0.75);
     --color-panel-bg: rgba(13, 24, 44, 0.62);
     --color-panel-alt-bg: rgba(14, 27, 48, 0.56);
@@ -109,10 +111,10 @@
     --scrollbar-btn-bg: linear-gradient(to bottom, #2b4b74 0%, #233f63 50%, #1c3554 100%);
     --scrollbar-btn-bg-hover: linear-gradient(to bottom, #356090 0%, #2c527a 50%, #244769 100%);
     --scrollbar-btn-bg-active: linear-gradient(to bottom, #274d77 0%, #223f61 50%, #1b3350 100%);
-    --scrollbar-thumb-bg: linear-gradient(to bottom, #3d6794 0%, #33577e 50%, #2a496b 100%);
+    --scrollbar-thumb-bg: linear-gradient(to right, #303040 0%, #434153 50%, #343547 100%);
     --scrollbar-thumb-bg-hover: linear-gradient(to bottom, #4c79aa 0%, #40658f 50%, #345676 100%);
-    --scrollbar-thumb-shadow: inset 0 1px 0 rgba(197, 225, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.34);
-    --scrollbar-thumb-border: rgba(128, 170, 225, 0.45);
+    --scrollbar-thumb-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.8);
+    --scrollbar-thumb-border: #969b9e;
     --scrollbar-icon: #c3dcff;
     --switch-track-bg: linear-gradient(to bottom, #2f4360 0%, #27374f 49%, #1f2f45 50%, #1a2639 100%);
     --switch-track-border: #607ca2;
@@ -216,10 +218,11 @@
         @apply w-full max-w-6xl rounded-md backdrop-blur-[1px] p-3 pt-10 relative overflow-hidden mx-auto;
         background-color: var(--color-shell-bg);
         box-shadow: var(--shadow-shell);
+        backdrop-filter: var(--blur-shell-bg);
     }
 
     .win7-inner {
-        @apply w-full p-5;
+        @apply w-full;
         background-color: var(--color-inner-bg);
         box-shadow: var(--shadow-inner);
         color: var(--color-text);
