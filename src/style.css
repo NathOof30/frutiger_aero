@@ -31,7 +31,9 @@
     --window-deco-gloss-bottom: rgba(255, 255, 255, 0.015);
     --window-deco-bottom-top: rgba(255, 255, 255, 0.12);
     --window-deco-bottom-bottom: rgba(255, 255, 255, 0);
-    --window-deco-hover: 1.015;
+    --window-deco-hover: 1.008;
+    --window-deco-filter: saturate(0.97) brightness(0.96);
+    --window-deco-filter-hover: saturate(0.99) brightness(0.98);
     --window-deco-opacity: 0.92;
     --window-deco-icon-opacity: 0.88;
     --scrollbar-rail-bg: linear-gradient(to bottom, rgba(236, 244, 252, 0.7), rgba(208, 221, 238, 0.64));
@@ -94,9 +96,11 @@
     --window-deco-gloss-bottom: rgba(196, 224, 255, 0.02);
     --window-deco-bottom-top: rgba(181, 215, 255, 0.09);
     --window-deco-bottom-bottom: rgba(181, 215, 255, 0);
-    --window-deco-hover: 1.025;
-    --window-deco-opacity: 0.9;
-    --window-deco-icon-opacity: 0.85;
+    --window-deco-hover: 1.012;
+    --window-deco-filter: saturate(0.9) brightness(0.82);
+    --window-deco-filter-hover: saturate(0.93) brightness(0.87);
+    --window-deco-opacity: 0.88;
+    --window-deco-icon-opacity: 0.82;
     --scrollbar-rail-bg: linear-gradient(to bottom, rgba(21, 38, 65, 0.7), rgba(14, 27, 47, 0.7));
     --scrollbar-rail-shadow: inset 0 1px 0 rgba(184, 219, 255, 0.12), inset 0 -1px 0 rgba(0, 0, 0, 0.36);
     --scrollbar-btn-bg: linear-gradient(to bottom, #2b4b74 0%, #233f63 50%, #1c3554 100%);
@@ -242,11 +246,12 @@
     .win7-window-buttons > button > div:first-child {
         box-shadow: var(--window-deco-inset) !important;
         opacity: var(--window-deco-opacity);
+        filter: var(--window-deco-filter);
         transition: filter 140ms ease;
     }
 
     .win7-window-buttons > button:hover > div:first-child {
-        filter: brightness(var(--window-deco-hover));
+        filter: var(--window-deco-filter-hover) brightness(var(--window-deco-hover));
     }
 
     .win7-window-buttons > button > div:nth-child(2) {
