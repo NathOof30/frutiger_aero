@@ -141,12 +141,12 @@
     --cta-active-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.34), inset 0 0 0 1px rgba(90, 169, 233, 0.34);
 }
 
-.site-surface {
-    background-image: var(--bg-overlay), var(--bg-image);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: var(--color-text);
+@layer base {
+    .site-surface {
+        @apply bg-cover bg-center bg-fixed;
+        background-image: var(--bg-overlay), var(--bg-image);
+        color: var(--color-text);
+    }
 }
 
 @layer components {
@@ -480,26 +480,49 @@
 }
 
 body.mobile-menu-open {
-    overflow: hidden;
+    @apply overflow-hidden;
 }
 
 @media (max-width: 767px) {
     .win7-input {
-        min-height: 44px;
+        @apply min-h-11;
     }
 
     .cta-win7,
     .cta-win7-soft,
     .win7-nav-link {
-        min-height: 44px;
+        @apply min-h-11;
     }
 }
 
 @media (max-width: 639px) {
-    .win7-window-buttons,
     #buttons-container,
     .explorer-scrollbar {
         display: none !important;
+    }
+
+    .win7-window-buttons {
+        @apply right-[0.55rem];
+    }
+
+    .win7-window-buttons > button {
+        @apply !w-6 !h-[1.1rem];
+    }
+
+    .win7-window-buttons > button:last-child {
+        @apply !w-8;
+    }
+
+    .win7-window-buttons i.bx-minus {
+        @apply !text-xs !mt-px;
+    }
+
+    .win7-window-buttons i.bx-rectangle {
+        @apply !text-[10px];
+    }
+
+    .win7-window-buttons i.bx-x {
+        @apply !text-sm;
     }
 
     .win7-shell {
