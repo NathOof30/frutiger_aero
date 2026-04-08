@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme{
-    --font-open-sans: 'Source Sans 3', sans-serif;
+    --font-open-sans: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -13,7 +13,7 @@
     --color-text-muted: #4b5564;
     --color-border: rgba(0, 0, 0, 0.22);
     --color-divider: rgba(0, 0, 0, 0.14);
-    --color-shell-bg: rgba(255, 255, 255, 0.3);
+    --color-shell-bg: rgb(140 190 255 / 72%);
     --blur-shell-bg: blur(2px);
     --color-inner-bg: #ffffff;
     --color-panel-bg: rgba(255, 255, 255, 0.7);
@@ -71,6 +71,9 @@
     --cta-active-border: #2f8fd0;
     --cta-active-bg: linear-gradient(to bottom, #d8ecfc 0%, #c6e3fb 49%, #b4dbfb 50%, #9ccdf4 100%);
     --cta-active-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.14), inset 0 0 0 1px rgba(95, 171, 228, 0.38);
+    --header-btn-bg: linear-gradient(rgb(216 231 255 / 56%) 0%, rgb(152 184 248 / 18%) 49%, rgb(152 192 255 / 39%) 50%, rgb(88 153 255 / 30%) 100%);
+    --header-btn-hover-bg: linear-gradient(rgba(244, 248, 255, 0.56) 0%, rgba(152, 184, 248, 0.18) 49%, rgba(168, 201, 255, 0.39) 50%, rgba(124, 174, 255, 0.3) 100%);
+    --header-btn-border: rgba(83, 183, 255, 0.5);
 }
 
 .theme-night {
@@ -139,6 +142,10 @@
     --cta-active-border: #3ea6eb;
     --cta-active-bg: linear-gradient(to bottom, #245a88 0%, #214f78 49%, #1c4569 50%, #173a58 100%);
     --cta-active-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.34), inset 0 0 0 1px rgba(90, 169, 233, 0.34);
+    --header-btn-bg: linear-gradient(rgba(216, 231, 255, 0.317) 0%, rgb(152 184 248 / 18%) 49%, rgba(152, 191, 255, 0.18) 50%, rgba(88, 152, 255, 0.18) 100%);
+    --header-btn-hover-bg: linear-gradient(rgba(255, 255, 255, 0.56) 0%, rgba(177, 203, 255, 0.18) 49%, rgba(173, 205, 255, 0.18) 50%, rgba(103, 161, 255, 0.098) 100%);
+    --header-btn-border: rgba(95, 117, 150, 0.4);
+    --header-btn-hover-border: rgba(24, 63, 90, 0.9);
 }
 
 .site-surface {
@@ -147,6 +154,7 @@
     background-position: center;
     background-attachment: fixed;
     color: var(--color-text);
+    font-family: var(--font-open-sans);
 }
 
 @layer components {
@@ -162,6 +170,24 @@
         background-color: var(--color-shell-bg);
         border-color: var(--color-border);
         box-shadow: var(--shadow-footer);
+    }
+
+    .win7-taskbar-button {
+        @apply inline-flex items-center gap-2 px-3 py-2 rounded-sm border font-open-sans font-semibold text-[14px] leading-none tracking-[0.01em] no-underline cursor-pointer select-none transition-[border-color,background,box-shadow,color] duration-120 ease-in;
+        border-color: var(--header-btn-border);
+        background: var(--header-btn-bg);
+        box-shadow: inset 0 1px 0 rgba(201, 223, 255, 0.15), 0 1px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .win7-taskbar-button:hover {
+        border-color: var(--header-btn-hover-border);
+        background: var(--header-btn-hover-bg);
+        box-shadow: inset 0 1px 0 rgba(224, 242, 255, 0.2), inset 0 0 0 1px rgba(104, 195, 255, 0.3), 0 0 0 1px rgba(64, 171, 245, 0.2);
+    }
+
+    .win7-taskbar-button:focus-visible {
+        @apply outline-none border-dashed border-2;
+        border-color: var(--color-input-focus);
     }
 
     .cta-win7 {
@@ -215,7 +241,7 @@
     }
 
     .win7-shell {
-        @apply w-full max-w-6xl rounded-md backdrop-blur-[1px] p-3 pt-10 relative overflow-hidden mx-auto;
+        @apply w-full rounded-md backdrop-blur-[1px] p-3 pt-10 relative overflow-hidden cursor-pointer;
         background-color: var(--color-shell-bg);
         box-shadow: var(--shadow-shell);
         backdrop-filter: var(--blur-shell-bg);
@@ -417,7 +443,8 @@
 .theme-animated .theme-toggle,
 .theme-animated .theme-toggle-icon,
 .theme-animated .win7-titlebar-label,
-.theme-animated .win7-nav-link {
+.theme-animated .win7-nav-link,
+.theme-animated .win7-taskbar-button {
     transition-property: background-color, color, border-color, box-shadow, background-image;
     transition-duration: 240ms;
     transition-timing-function: ease;
@@ -492,4 +519,59 @@
 
 .theme-night strong {
     color: var(--color-text-strong);
+}
+
+@media (max-width: 1024px) {
+    body.site-surface {
+        overflow: auto !important;
+    }
+
+    main {
+        padding-top: 6.5rem;
+    }
+
+    .win7-footer {
+        position: fixed !important;
+        top: 0 !important;
+        bottom: auto !important;
+        left: 0 !important;
+        right: 0 !important;
+        padding: 0.5rem !important;
+    }
+
+    .win7-footer .w-full.mx-auto {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.75rem !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .win7-shell {
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        z-index: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 0 1.5rem !important;
+    }
+
+    .win7-shell.hidden {
+        display: block !important;
+    }
+
+    .win7-shell .win7-titlebar,
+    .win7-shell .win7-window-buttons {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+    }
+
+    .win7-shell .win7-window-buttons {
+        margin-bottom: 0.75rem !important;
+    }
 }

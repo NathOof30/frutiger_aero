@@ -8,39 +8,13 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="/src/img/icons/logo.ico" />
   </head>
-  <body class="site-surface theme-night theme-animated min-h-screen">
+  <body class="site-surface theme-night theme-animated min-h-screen overflow-hidden">
 
-    <header class="win7-header">
-      <div class="max-w-6xl h-full mx-auto px-6 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <img src="/src/img/icons/logo.ico" alt="ClearSky" class="w-8 h-8" />
-          <span class="text-black font-open-sans font-semibold text-xl">ClearSky Archiving</span>
-        </div>
-        <nav class="flex items-center gap-6">
-          <a href="#hero" class="win7-nav-link">Accueil</a>
-          <a href="#explorateur" class="win7-nav-link">Explorateur</a>
-          <a href="#tarifs" class="win7-nav-link">Tarifs</a>
-          <a href="#footer" class="win7-nav-link">Assistance</a>
-        </nav>
-        <div class="flex items-center gap-2">
-          <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Basculer entre thème clair et sombre" aria-pressed="true">
-            <span class="theme-toggle-track">
-              <i class='bx bx-sun theme-toggle-icon theme-toggle-icon-sun' aria-hidden="true"></i>
-              <i class='bx bx-moon theme-toggle-icon theme-toggle-icon-moon' aria-hidden="true"></i>
-              <span class="theme-toggle-knob" aria-hidden="true"></span>
-            </span>
-          </button>
-          <a href="#" class="cta-win7-soft">Connexion</a>
-          <a href="#" class="cta-win7">Inscription</a>
-        </div>
-      </div>
-    </header>
+    <main class="relative min-h-screen px-6 pb-10 pt-8">
 
-    <main class="px-6 pb-10 pt-8 space-y-8">
-
-      <section id="hero" class="win7-shell">
+      <section id="hero" class="win7-shell hidden absolute top-4 left-4 w-200 h-122 z-15">
         <div id="buttons-container" class="flex flex-row rounded-b-md overflow-hidden border-x border-b border-black/25 items-end absolute top-0 right-3 shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
-          <button class="relative w-8 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
+            <button data-minimize="hero" class="relative w-8 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
             <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#7889b3]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
             <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
@@ -52,7 +26,7 @@
             <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
             <div class="absolute bottom-0 inset-x-0 h-[10%] bg-linear-to-t from-white/40 to-transparent"></div>
           </button>
-          <button class="relative w-15 h-6 group overflow-hidden " tabindex="-1">
+          <button data-minimize="hero" class="relative w-15 h-6 group overflow-hidden " tabindex="-1">
             <div class="absolute inset-0 bg-[#C40F05]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-[#ee4e45]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
             <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] "></i>
@@ -91,9 +65,9 @@
         </div>
       </section>
 
-      <section id="explorateur" class="win7-shell">
+      <section id="explorateur" class="win7-shell hidden absolute bottom-17 left-12 w-200 h-140 z-10">
         <div id="buttons-container" class="flex flex-row rounded-b-md overflow-hidden border-x border-b border-black/25 items-end absolute top-0 right-3 shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
-          <button class="relative w-8 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
+          <button data-minimize="explorateur" class="relative w-8 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
             <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#7889b3]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
             <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
@@ -105,7 +79,7 @@
             <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
             <div class="absolute bottom-0 inset-x-0 h-[10%] bg-linear-to-t from-white/40 to-transparent"></div>
           </button>
-          <button class="relative w-15 h-6 group overflow-hidden " tabindex="-1">
+          <button data-minimize="explorateur" class="relative w-15 h-6 group overflow-hidden " tabindex="-1">
             <div class="absolute inset-0 bg-[#C40F05]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-[#ee4e45]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
             <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] "></i>
@@ -242,9 +216,9 @@
         </div>
       </section>
 
-      <section id="features-social" class="win7-shell">
+      <section id="features-social" class="win7-shell hidden absolute top-8 right-14 w-248 h-127 z-0">
         <div id="buttons-container" class="flex flex-row rounded-b-md overflow-hidden border-x border-b border-black/25 items-end absolute top-0 right-3 shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
-          <button class="relative w-8 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
+          <button data-minimize="features-social" class="relative w-8 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
             <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#7889b3]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
             <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
@@ -256,7 +230,7 @@
             <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
             <div class="absolute bottom-0 inset-x-0 h-[10%] bg-linear-to-t from-white/40 to-transparent"></div>
           </button>
-          <button class="relative w-15 h-6 group overflow-hidden " tabindex="-1">
+          <button data-minimize="features-social" class="relative w-15 h-6 group overflow-hidden " tabindex="-1">
             <div class="absolute inset-0 bg-[#C40F05]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-[#ee4e45]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
             <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] "></i>
@@ -324,9 +298,9 @@
         </div>
       </section>
 
-      <section id="tarifs" class="win7-shell">
+      <section id="tarifs" class="win7-shell hidden absolute bottom-17 right-12 w-184 h-100 z-5">
         <div id="buttons-container" class="flex flex-row rounded-b-md overflow-hidden border-x border-b border-black/25 items-end absolute top-0 right-3 shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
-          <button class="relative w-8 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
+          <button data-minimize="tarifs" class="relative w-8 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
             <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#7889b3]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
             <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
@@ -338,7 +312,7 @@
             <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
             <div class="absolute bottom-0 inset-x-0 h-[10%] bg-linear-to-t from-white/40 to-transparent"></div>
           </button>
-          <button class="relative w-15 h-6 group overflow-hidden " tabindex="-1">
+          <button data-minimize="tarifs" class="relative w-15 h-6 group overflow-hidden " tabindex="-1">
             <div class="absolute inset-0 bg-[#C40F05]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-[#ee4e45]"></div>
             <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
             <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] "></i>
@@ -346,7 +320,7 @@
           </button>
         </div>
         <div class="win7-titlebar">
-          <img src="/src/img/icons/what.ico" alt="ClearSky" class="w-5 h-5" />
+          <img src="/src/img/icons/zip.ico" alt="ClearSky" class="w-5 h-5" />
           <p class="win7-titlebar-label">Tarification</p>
         </div>
         <div class="win7-inner">
@@ -392,53 +366,126 @@
           </div>
         </div>
       </section>
-    </main>
 
-    <footer id="footer" class="win7-footer">
-      <div class="max-w-6xl mx-auto px-6 py-6">
-        <div class="grid grid-cols-[1fr_1fr_1fr_1.2fr] divide-x divide-black/15 bg-white/40">
-          <div class="p-4">
-            <h4 class="font-semibold mb-2 text-black">Produit</h4>
-            <ul class="text-[14px] text-black/80 space-y-1">
-              <li><a href="#" class="hover:underline">Fonctionnalités</a></li>
-              <li><a href="#" class="hover:underline">Tarifs</a></li>
-              <li><a href="#" class="hover:underline">Sécurité</a></li>
-            </ul>
-          </div>
-          <div class="p-4">
-            <h4 class="font-semibold mb-2 text-black">Entreprise</h4>
-            <ul class="text-[14px] text-black/80 space-y-1">
-              <li><a href="#" class="hover:underline">À propos</a></li>
-              <li><a href="#" class="hover:underline">Blog</a></li>
-              <li><a href="#" class="hover:underline">Carrière</a></li>
-            </ul>
-          </div>
-          <div class="p-4">
-            <h4 class="font-semibold mb-2 text-black">Assistance</h4>
-            <ul class="text-[14px] text-black/80 space-y-1">
-              <li><a href="#" class="hover:underline">Centre d'aide</a></li>
-              <li><a href="#" class="hover:underline">Statut</a></li>
-              <li><a href="#" class="hover:underline">Contact</a></li>
-            </ul>
-          </div>
-          <div class="p-4">
-            <h4 class="font-semibold mb-2 text-black">Newsletter</h4>
-            <p class="text-[14px] text-black/80 mb-3">Recevez les nouveautés produit, les conseils de sauvegarde et une bonne excuse pour trier vos fichiers.</p>
-            <div class="flex gap-2">
-              <input type="email" class="win7-input h-7.5" placeholder="Votre e-mail" />
-              <button class="cta-win7-soft">S'inscrire</button>
+      <section id="footer" class="win7-shell hidden absolute bottom-14 left-1/5 w-240 h-83 z-20">
+        <div id="buttons-container" class="flex flex-row rounded-b-md overflow-hidden border-x border-b border-black/25 items-end absolute top-0 right-3 shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
+          <button data-minimize="footer" class="relative w-8 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
+            <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#7889b3]"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <i class="bx bx-minus relative text-white text-[18px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)] mt-2"></i>
+            <div class="absolute bottom-0 inset-x-0 h-[10%] bg-linear-to-t from-white/40 to-transparent"></div>
+          </button>
+          <button class="relative w-8 h-6 group border-r border-black/40 overflow-hidden" tabindex="-1">
+            <div class="absolute inset-0 bg-[#3E4E77]/80 shadow-[inset_0_0_8px_rgba(255,255,255,0.3)] group-hover:bg-[#7889b3]"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/40 to-white/5"></div>
+            <i class="bx bx-rectangle relative text-white text-[14px] drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"></i>
+            <div class="absolute bottom-0 inset-x-0 h-[10%] bg-linear-to-t from-white/40 to-transparent"></div>
+          </button>
+          <button data-minimize="footer" class="relative w-15 h-6 group overflow-hidden " tabindex="-1">
+            <div class="absolute inset-0 bg-[#C40F05]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.4)] group-hover:bg-[#ee4e45]"></div>
+            <div class="absolute inset-0 h-[50%] bg-linear-to-b from-white/50 to-white/10"></div>
+            <i class="bx bx-x relative text-white text-[22px] drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)] "></i>
+            <div class="absolute bottom-0 inset-x-0 h-[10%] bg-linear-to-t from-white/40 to-transparent"></div>
+          </button>
+        </div>
+        <div class="win7-titlebar">
+          <img src="/src/img/icons/what.ico" alt="ClearSky" class="w-5 h-5" />
+          <p class="win7-titlebar-label">Assistance - ClearSky Archiving</p>
+        </div>
+        <div class="win7-inner">
+          <div class="grid grid-cols-[1fr_1fr_1fr_1.2fr] divide-x divide-black/15 p-4 bg-white/40">
+            <div class="p-4">
+              <h4 class="font-semibold mb-2 text-black">Produit</h4>
+              <ul class="text-[14px] text-black/80 space-y-1">
+                <li><a href="#" class="hover:underline">Fonctionnalités</a></li>
+                <li><a href="#" class="hover:underline">Tarifs</a></li>
+                <li><a href="#" class="hover:underline">Sécurité</a></li>
+              </ul>
+            </div>
+            <div class="p-4">
+              <h4 class="font-semibold mb-2 text-black">Entreprise</h4>
+              <ul class="text-[14px] text-black/80 space-y-1">
+                <li><a href="#" class="hover:underline">À propos</a></li>
+                <li><a href="#" class="hover:underline">Blog</a></li>
+                <li><a href="#" class="hover:underline">Carrière</a></li>
+              </ul>
+            </div>
+            <div class="p-4">
+              <h4 class="font-semibold mb-2 text-black">Assistance</h4>
+              <ul class="text-[14px] text-black/80 space-y-1">
+                <li><a href="#" class="hover:underline">Centre d'aide</a></li>
+                <li><a href="#" class="hover:underline">Statut</a></li>
+                <li><a href="#" class="hover:underline">Contact</a></li>
+              </ul>
+            </div>
+            <div class="p-4">
+              <h4 class="font-semibold mb-2 text-black">Newsletter</h4>
+              <p class="text-[14px] text-black/80 mb-3">Recevez les nouveautés produit, les conseils de sauvegarde et une bonne excuse pour trier vos fichiers.</p>
+              <div class="flex gap-2">
+                <input type="email" class="win7-input h-7.5" placeholder="Votre e-mail" />
+                <button class="cta-win7-soft">S'inscrire</button>
+              </div>
             </div>
           </div>
+          <p class="mt-6 pb-4 pt-4 border-t border-black/15 text-[13px] text-black/70 px-4">© 2026 ClearSky Archiving. Tous droits réservés.</p>
         </div>
-        <p class="mt-6 pt-4 border-t border-black/15 text-[13px] text-black/70">© 2026 ClearSky Archiving. Tous droits réservés.</p>
+      </section>
+    </main>
+
+    <header class="win7-footer fixed bottom-0 left-0 right-0 z-50">
+      <div class="w-full h-full mx-auto px-2 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex flex-col gap-3 lg:flex-row lg:justify-between lg:gap-15">
+          <div class="flex items-center gap-2">
+            <img src="/src/img/icons/logo.ico" alt="ClearSky" class="w-8 h-8" />
+            <span class="text-black font-open-sans font-semibold text-base">ClearSky Archiving</span>
+          </div>
+          <div class="hidden lg:flex flex-wrap items-center gap-2">
+            <button type="button" class="win7-taskbar-button flex items-center gap-2 w-45" data-task="hero" aria-label="Ouvrir Accueil">
+              <img src="/src/img/icons/planete.ico" alt="ClearSky" class="w-8 h-8" />
+              <span>Accueil</span>
+            </button>
+            <button type="button" class="win7-taskbar-button flex items-center gap-2 w-45" data-task="explorateur" aria-label="Ouvrir Explorateur">
+              <img src="/src/img/icons/explorateur.ico" alt="ClearSky" class="w-8 h-8" />
+              <span>Explorateur</span>
+            </button>
+            <button type="button" class="win7-taskbar-button flex items-center gap-2 w-45" data-task="features-social" aria-label="Ouvrir Caractéristiques">
+              <img src="/src/img/icons/people.ico" alt="ClearSky" class="w-8 h-8" />
+              <span>Caractéristiques</span>
+            </button>
+            <button type="button" class="win7-taskbar-button flex items-center gap-2 w-45" data-task="tarifs" aria-label="Ouvrir Tarifs">
+              <img src="/src/img/icons/zip.ico" alt="ClearSky" class="w-8 h-8" />
+              <span>Tarifs</span>
+            </button>
+            <button type="button" class="win7-taskbar-button flex items-center gap-2 w-45" data-task="footer" aria-label="Ouvrir Assistance">
+              <img src="/src/img/icons/what.ico" alt="ClearSky" class="w-8 h-8" />
+              <span>Assistance</span>
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <button id="theme-toggle" type="button" class="theme-toggle" aria-label="Basculer entre thème clair et sombre" aria-pressed="true">
+            <span class="theme-toggle-track">
+              <i class='bx bx-sun theme-toggle-icon theme-toggle-icon-sun' aria-hidden="true"></i>
+              <i class='bx bx-moon theme-toggle-icon theme-toggle-icon-moon' aria-hidden="true"></i>
+              <span class="theme-toggle-knob" aria-hidden="true"></span>
+            </span>
+          </button>
+          <a href="#" class="cta-win7-soft">Connexion</a>
+          <a href="#" class="cta-win7">Inscription</a>
+        </div>
       </div>
-    </footer>
+    </header>
 
     <script>
       (() => {
         const storageKey = 'clearsky-theme';
         const body = document.body;
         const toggle = document.getElementById('theme-toggle');
+        const shells = Array.from(document.querySelectorAll('.win7-shell'));
+        let zIndexCounter = Math.max(100, ...shells.map(shell => {
+          const z = parseInt(shell.style.zIndex, 10);
+          return Number.isFinite(z) ? z : 0;
+        }));
 
         if (!toggle) {
           return;
@@ -459,6 +506,47 @@
           const nextTheme = body.classList.contains('theme-night') ? 'light' : 'dark';
           applyTheme(nextTheme);
           localStorage.setItem(storageKey, nextTheme);
+        });
+
+        const getShellById = (id) => document.getElementById(id);
+        const isShellVisible = (shell) => shell && !shell.classList.contains('hidden');
+        const bringShellToFront = (shell) => {
+          zIndexCounter += 1;
+          shell.style.zIndex = zIndexCounter;
+          shell.classList.remove('hidden');
+        };
+        const hideShell = (shell) => shell.classList.add('hidden');
+        const getMaxShellZIndex = () => Math.max(0, ...shells.map(shell => {
+          const z = parseInt(shell.style.zIndex, 10);
+          return Number.isFinite(z) ? z : 0;
+        }));
+
+        shells.forEach(shell => shell.addEventListener('click', () => bringShellToFront(shell)));
+
+        document.querySelectorAll('button[data-minimize]').forEach(button => {
+          button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const targetShell = getShellById(button.dataset.minimize);
+            if (targetShell) {
+              hideShell(targetShell);
+            }
+          });
+        });
+
+        document.querySelectorAll('button[data-task]').forEach(button => {
+          button.addEventListener('click', () => {
+            const targetShell = getShellById(button.dataset.task);
+            if (!targetShell) {
+              return;
+            }
+
+            if (isShellVisible(targetShell) && parseInt(targetShell.style.zIndex, 10) >= getMaxShellZIndex()) {
+              hideShell(targetShell);
+              return;
+            }
+
+            bringShellToFront(targetShell);
+          });
         });
       })();
     </script>
