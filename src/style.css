@@ -278,12 +278,19 @@
 
     .win7-window-buttons > button > div:first-child {
         box-shadow: var(--window-deco-inset) !important;
+    }
+
+    .win7-window-buttons > button:hover > div:first-child {
+        filter: brightness(var(--window-deco-hover));
+    }
+
+    .theme-night .win7-window-buttons > button > div:first-child {
         opacity: var(--window-deco-opacity);
         filter: var(--window-deco-filter);
         transition: filter 140ms ease;
     }
 
-    .win7-window-buttons > button:hover > div:first-child {
+    .theme-night .win7-window-buttons > button:hover > div:first-child {
         filter: var(--window-deco-filter-hover) brightness(var(--window-deco-hover));
     }
 
@@ -295,7 +302,7 @@
         background-image: linear-gradient(to top, var(--window-deco-bottom-top), var(--window-deco-bottom-bottom)) !important;
     }
 
-    .win7-window-buttons > button > i {
+    .theme-night .win7-window-buttons > button > i {
         opacity: var(--window-deco-icon-opacity);
     }
 
@@ -425,6 +432,131 @@
 
     .explorer-scroll-grip {
         @apply text-[14px];
+    }
+
+    .mobile-menu-toggle,
+    .mobile-menu-close {
+        @apply inline-flex items-center justify-center w-11 h-11 rounded-[3px] border;
+        border-color: var(--color-border);
+        color: var(--nav-text);
+        background-color: transparent;
+    }
+
+    .mobile-menu-toggle:focus-visible,
+    .mobile-menu-close:focus-visible {
+        @apply outline-none border-dashed border-2;
+        border-color: var(--color-input-focus);
+    }
+
+    .mobile-menu-backdrop {
+        @apply fixed inset-0 z-40;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .mobile-menu-panel {
+        @apply fixed top-0 left-0 h-screen w-[88%] max-w-[340px] z-50 border-r;
+        background-color: var(--color-inner-bg);
+        border-color: var(--color-border);
+        box-shadow: var(--shadow-shell);
+        animation: menu-slide-in 220ms ease-out;
+    }
+
+    .mobile-menu-link {
+        @apply flex items-center w-full min-h-11 px-3 text-[16px] rounded-[3px] border;
+        border-color: var(--color-divider);
+        color: var(--nav-text);
+    }
+
+    .mobile-menu-link:hover {
+        color: var(--nav-text-hover);
+    }
+
+    .win7-tab,
+    .win7-tab-active {
+        @apply inline-flex items-center justify-center min-h-11 px-3 rounded-[3px] border text-[14px] whitespace-nowrap;
+        border-color: var(--color-divider);
+    }
+
+    .win7-tab {
+        color: var(--nav-text);
+    }
+
+    .win7-tab-active {
+        color: var(--nav-text-hover);
+        font-weight: 600;
+    }
+
+    .explorer-mobile-row {
+        @apply flex flex-col gap-0.5 py-3 border-b border-black/10 text-[14px] text-black/80;
+    }
+
+    .explorer-mobile-row:last-child {
+        border-bottom: 0;
+    }
+}
+
+@keyframes menu-slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+body.mobile-menu-open {
+    @apply overflow-hidden;
+}
+
+@media (max-width: 767px) {
+    .win7-input {
+        @apply min-h-11;
+    }
+
+    .cta-win7,
+    .cta-win7-soft,
+    .win7-nav-link {
+        @apply min-h-11;
+    }
+}
+
+@media (max-width: 639px) {
+    #buttons-container,
+    .explorer-scrollbar {
+        display: none !important;
+    }
+
+    .win7-window-buttons {
+        @apply right-[0.55rem];
+    }
+
+    .win7-window-buttons > button {
+        @apply !w-6 !h-[1.1rem];
+    }
+
+    .win7-window-buttons > button:last-child {
+        @apply !w-8;
+    }
+
+    .win7-window-buttons i.bx-minus {
+        @apply !text-xs !mt-px;
+    }
+
+    .win7-window-buttons i.bx-rectangle {
+        @apply !text-[10px];
+    }
+
+    .win7-window-buttons i.bx-x {
+        @apply !text-sm;
+    }
+
+    .win7-shell {
+        padding-top: 2.2rem;
+    }
+
+    .win7-inner {
+        padding: 0.9rem;
     }
 }
 
