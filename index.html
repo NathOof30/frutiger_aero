@@ -609,7 +609,7 @@
         </div>
         <div class="win7-inner">
           <div
-            class="grid grid-cols-[1fr_1fr_1fr_1.2fr] divide-x divide-black/15 p-4 bg-white/40">
+            class="grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr_1.2fr] md:divide-x divide-black/15 p-2 sm:p-4 bg-white/40">
             <div class="p-4">
               <h4 class="font-semibold mb-2 text-black">Produit</h4>
               <ul class="text-[14px] text-black/80 space-y-1">
@@ -639,10 +639,10 @@
               <p class="text-[14px] text-black/80 mb-3">Recevez les nouveautés
                 produit, les conseils de sauvegarde et une bonne excuse pour
                 trier vos fichiers.</p>
-              <div class="flex gap-2">
+              <div class="flex flex-col sm:flex-row gap-2">
                 <input type="email" class="win7-input h-7.5"
                   placeholder="Votre e-mail" />
-                <button class="cta-win7-soft">S'inscrire</button>
+                <button class="cta-win7-soft w-full sm:w-auto">S'inscrire</button>
               </div>
             </div>
           </div>
@@ -655,14 +655,16 @@
 
     <header class="win7-footer fixed bottom-0 left-0 right-0 z-50">
       <div
-        class="w-full h-full mx-auto px-2 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+        class="w-full h-full mx-auto px-2 flex items-center justify-between gap-2 lg:flex-row lg:items-center lg:justify-between">
         <div
-          class="flex flex-col gap-3 lg:flex-row lg:justify-between lg:gap-15">
+          class="flex items-center gap-2 lg:flex-row lg:justify-between lg:gap-15">
           <div class="flex items-center gap-2">
+            <button id="menu-toggle" type="button" class="mobile-menu-toggle lg:hidden" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+              <i class='bx bx-menu text-[26px]' aria-hidden="true"></i>
+            </button>
             <img src="/src/img/icons/logo.ico" alt="ClearSky" class="w-8 h-8" />
             <span
-              class="text-black font-open-sans font-semibold text-base">ClearSky
-              Archiving</span>
+              class="text-black font-open-sans font-semibold text-base">ClearSky <span class="hidden sm:inline">Archiving</span></span>
           </div>
           <div class="hidden lg:flex flex-wrap items-center gap-2">
             <button type="button"
@@ -702,7 +704,7 @@
             </button>
           </div>
         </div>
-        <div class="flex flex-wrap items-center gap-2">
+        <div class="flex items-center gap-2">
           <button id="theme-toggle" type="button" class="theme-toggle"
             aria-label="Basculer entre thème clair et sombre"
             aria-pressed="true">
@@ -714,10 +716,34 @@
               <span class="theme-toggle-knob" aria-hidden="true"></span>
             </span>
           </button>
-          <a href="#" class="cta-win7-soft">Connexion</a>
-          <a href="#" class="cta-win7">Inscription</a>
+          <a href="#" class="cta-win7-soft hidden lg:inline-flex">Connexion</a>
+          <a href="#" class="cta-win7 hidden lg:inline-flex">Inscription</a>
         </div>
       </div>
+
+      <div id="mobile-menu-backdrop" class="mobile-menu-backdrop lg:hidden" hidden></div>
+      <nav id="mobile-menu" class="mobile-menu-panel lg:hidden" aria-label="Navigation mobile" hidden>
+        <div class="flex items-center justify-between px-4 py-4 border-b border-black/15">
+          <div class="flex items-center gap-2">
+            <img src="/src/img/icons/logo.ico" alt="ClearSky" class="w-7 h-7" />
+            <span class="text-black font-open-sans font-semibold text-base">ClearSky</span>
+          </div>
+          <button id="menu-close" type="button" class="mobile-menu-close" aria-label="Fermer le menu">
+            <i class='bx bx-x text-[28px]' aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="p-4 space-y-3">
+          <a href="#hero" class="mobile-menu-link">Accueil</a>
+          <a href="#explorateur" class="mobile-menu-link">Explorateur</a>
+          <a href="#features-social" class="mobile-menu-link">Caractéristiques</a>
+          <a href="#tarifs" class="mobile-menu-link">Tarifs</a>
+          <a href="#footer" class="mobile-menu-link">Assistance</a>
+        </div>
+        <div class="p-4 pt-0 flex flex-col gap-3">
+          <a href="#" class="cta-win7-soft w-full">Connexion</a>
+          <a href="#" class="cta-win7 w-full">Inscription</a>
+        </div>
+      </nav>
     </header>
 
     <script>
@@ -791,6 +817,8 @@
 
             bringShellToFront(targetShell);
           });
+        });
+
         const menuToggle = document.getElementById('menu-toggle');
         const menuClose = document.getElementById('menu-close');
         const mobileMenu = document.getElementById('mobile-menu');
